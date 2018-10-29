@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `user_credentials` (
     `password` varchar(50) DEFAULT NULL,
     `email` varchar(150) DEFAULT NULL,
     `DOB` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
