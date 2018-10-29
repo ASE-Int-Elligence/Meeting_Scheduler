@@ -1,3 +1,2 @@
 pymysql
 pytest
-unittest
