@@ -1,10 +1,11 @@
 
-import Database_op
+from backend.Database_op import *
+# import Database_op
 import copy
 
 def login_page(username,password):
 
-    result = Database_op.find_by_primary_key("user_credentials", username)
+    result = find_by_primary_key("user_credentials", username)
     if password == result[0]['password']:
         return True
     else:
@@ -18,7 +19,7 @@ def sign_up(username,password, nameLast,nameFirst,email,DOB):
     template['email'] = email
     template['DOB'] = DOB
     template['password'] = password
-    result = Database_op.create_user("user_credentials",template)
+    result = create_user("user_credentials",template)
     return result
 
 if __name__ == '__main__':
