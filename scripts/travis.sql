@@ -1,4 +1,5 @@
 create database IF NOT EXISTS `ase_project_db`;
+USE `ase_project_db`;
 
 CREATE TABLE IF NOT EXISTS `user_credentials` (
     `username` varchar(50) DEFAULT NULL,
