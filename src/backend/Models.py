@@ -18,15 +18,27 @@ class User(UserMixin):
     firstname = db.Column(db.String(80))
     lastname = db.Column(db.String(80))
 
-    def __init__(self, email, password, username, firstname, lastname):
+    def __init__(self, email, password, username, firstname, lastname, active=True):
         self.email = email
         self.password = password
         self.username = username
         self.firstname = firstname
         self.lastname = lastname
+        self.active = active
 
     def __repr__(self):
         return "%d/%s/%s" % (self.email, self.firstname, self.lastname)
+    
+    def is_active(self):
+        # Here you should write whatever the code is
+        # that checks the database if your user is active
+        return self.active
+
+    def is_anonymous(self):
+        return False
+
+    def is_authenticated(self):
+        return True
 
 
 if __name__ == "__main__":
