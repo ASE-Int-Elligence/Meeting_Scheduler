@@ -27,4 +27,5 @@ script:
   # - sleep 2
   # - kill $PID
   - pytest
-  - xvfb-run python $TRAVIS_BUILD_DIR/src/frontend/app.py
+  # - xvfb-run python $TRAVIS_BUILD_DIR/src/frontend/app.py
+  - python $TRAVIS_BUILD_DIR/src/frontend/app.py
