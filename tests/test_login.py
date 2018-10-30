@@ -16,9 +16,9 @@ import unittest
 class LoginTest(unittest.TestCase):
 
     def test_login_email(self):
-        self.assertTrue(login_email("example@gmail.com", "admin"))
-        self.assertFalse(login_email("example@gmail.com", "a"))
-        self.assertFalse(login_email("example@hotmail.com", "admin"))
+        self.assertTrue(login_email("admin@gmail.com", "admin"))
+        self.assertFalse(login_email("admin@gmail.com", "a"))
+        self.assertFalse(login_email("admin@hotmail.com", "admin"))
         self.assertFalse(login_email("example", "a"))
 
     def test_login_username(self):
