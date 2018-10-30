@@ -2,8 +2,8 @@ language: python
 python:
   - "3.6"
 
-services:
-- mysql
+# services:
+# - mysql
 
 # command to install dependencies
 install:
@@ -14,12 +14,14 @@ install:
 
 before_script:
   # - mysql -u travis --password="" < scripts/travis.sql
+  - export FLASK_APP="$TRAVIS_BUILD_DIR/src/backend/meeting_scheduler.py"
+  - export FLASK_DEBUG=1
 
 
 script: 
 #  - python content_extract.py
-  - python src/backend/Models.py
-  - python src/backend/meeting_scheduler.py
+  - python $TRAVIS_BUILD_DIR/src/backend/Models.py
+  - python $TRAVIS_BUILD_DIR/src/backend/meeting_scheduler.py
   - PID=$!
   - sleep 2
   - kill $PID
