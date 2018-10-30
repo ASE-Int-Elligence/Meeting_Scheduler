@@ -26,7 +26,7 @@
 #     result = sign_up("user4","password3","priya","chandana","email@gmail.com","125")
 #     print(result)
 
-from Models import db, User
+from backend.Models import db, User
 
 def login_username(username, password):
     user = User.query.filter_by(username=username).first()
