@@ -1,8 +1,6 @@
 #!/usr/bin/python
-from tkinter import *
-from tkinter import ttk
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import ttk, messagebox, Frame, Label, CENTER, Entry, Button
 
 from backend.Models import db, User
 from backend.login import login_email, login_username, create_user
