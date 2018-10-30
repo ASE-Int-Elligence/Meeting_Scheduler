@@ -30,7 +30,7 @@ class LoginTest(unittest.TestCase):
     def test_create_user(self):
         create_user(email="testuser@gmail.com", password="test", username="testuser", firstname="Eddie", lastname="Black")
 
-        user = User.query.filter(email="testuser@gmail.com")
+        user = User.query.filter(email="testuser@gmail.com").first()
 
         self.assertEqual(user.password, 'test')
         self.assertEqual(user.username, 'testuser')
