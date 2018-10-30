@@ -4,6 +4,7 @@ import json
 # cnx = pymysql.connect(host='localhost', port=3306, user='dbuser', password='dbuser', db='ase_project_db', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 cnx = pymysql.connect(host='localhost', port=3306, user='travis', password='', db='ase_project_db', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 
+
 def run_q(q, args, fetch=False):
     cursor = cnx.cursor()
     cursor.execute(q, args)
