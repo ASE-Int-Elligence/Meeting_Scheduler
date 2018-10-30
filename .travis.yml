@@ -20,7 +20,9 @@ before_script:
 
 
 script: 
-  - bash scripts/post_commit.sh
+  - prospector --strictness veryhigh
+  - pytest
+  # - bash scripts/post_commit.sh
 #  - python content_extract.py
   # - python $TRAVIS_BUILD_DIR/src/backend/Models.py
   # - python $TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py &
