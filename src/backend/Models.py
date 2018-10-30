@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
-from backend import app
+from __init__ import app
 
 
 # app = Flask(__name__)
@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 
-class User(UserMixin):
+class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(80), unique=True)
     password = db.Column(db.String(80))
@@ -42,7 +42,8 @@ class User(UserMixin):
 
 
 if __name__ == "__main__":
+    db.create_all()
     new_user = User(email="admin@gmail.com", password="admin", username="admin", firstname="Amy", lastname="Smith")
     db.session.add(new_user)
-    db.cession.commit()
+    db.session.commit()
 

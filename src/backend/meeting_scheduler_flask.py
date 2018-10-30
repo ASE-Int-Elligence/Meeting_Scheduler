@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash, redirect, url_for, request, Response
-from backend import app
+from __init__ import app
 
 app.config['SECRET_KEY'] = 'you-will-never-guess'
 
