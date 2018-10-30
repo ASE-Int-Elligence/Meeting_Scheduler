@@ -48,7 +48,9 @@ def login_email(email, password):
         else:
             return False
 
-def create_user(email, password, username, firstname, lastname):
+def create_user(email, password, username="", firstname="", lastname=""):
+    if username == "":
+        username = email
     user = User(email=email, password=password, username=username, firstname=firstname, lastname=lastname)
     db.session.add(user)
     db.session.commit()

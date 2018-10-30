@@ -4,6 +4,9 @@ from tkinter import ttk
 import tkinter as tk
 from tkinter import messagebox
 
+from backend.Models import db, User
+from backend.login import login_email, login_username, create_user
+
 
 class SampleApp(tk.Tk):
 
@@ -68,9 +71,27 @@ class SampleApp(tk.Tk):
 		self.nu_create_button = Button( self, text = "Create Account", command = self.create_user_pressed )
 		self.nu_create_button.place( relx = 0.55, rely = 0.6, anchor = CENTER)
 
+	def load_dashboard_page(self, user):
+		self.dashboard_title_label = Label(self, text="Meeting Scheduler User Dashboard")
+		self.dashboard_title_label.place(relx = 0.2, rely = 0.3, anchor = CENTER)
+
+		self.dashboard_greeting_label = Label(self, text="Hi, " + user.firstname + " " + user.last_name + "!")
+		self.dashboard_greeting_label.place(relx = 0.2, rely = 0.5, anchor = CENTER)
+
+
 	def login_button_pressed(self):
 		self.user_id = self.username_entry.get()
 		self.pwd = self.password_entry.get()
+
+		result = login_username(self.user_id, self.pwd)
+
+		if result:
+			user = User.query.filter_by(username=self.user_id).first()
+			self.load_dashboard_page(user)
+		else:
+			self.login_warning_label = Label(self, text="Error! Please check your username and password.")
+			self.login_warning_label.place(relx = 0.5, rely = 0.8, anchor = CENTER)
+
 
 	def newuser_button_pressed(self):
 		self.load_newuser_page()
@@ -79,7 +100,12 @@ class SampleApp(tk.Tk):
 		if self.nu_password_confirm_entry.get() == self.nu_password_entry.get():
 			self.new_user_id = self.nu_username_entry.get()
 			self.new_user_pwd = self.nu_password_confirm_entry.get()
+			
+
+			create_user(self.new_user_id, self.new_user_pwd)
 			self.load_login_page(True)
+
+
 		else:
 			messagebox.showinfo("Error", "Passwords don't match")
 
