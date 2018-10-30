@@ -1,1 +1,3 @@
-*/__pychache__
+src/backend/__pychache__
+tests/__pychache__
+.vscode
