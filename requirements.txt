@@ -2,3 +2,4 @@ pymysql
 pytest
 flask
 flask_sqlalchemy
+flask_login
