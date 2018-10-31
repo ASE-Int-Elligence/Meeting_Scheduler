@@ -9,6 +9,6 @@ prospector --strictness veryhigh > $filename1
 
 #pytest
 cd ../tests
-touch $filename2
 filename2="$TRAVIS_BUILD_DIR/report/$today-pytest.log"
+touch $filename2
 pytest *.py > $filename2
