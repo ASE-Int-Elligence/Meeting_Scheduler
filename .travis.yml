@@ -24,6 +24,7 @@ script:
   # - prospector --strictness veryhigh
   # - pytest
   - bash scripts/post_commit.sh
+  - python tests/test_login.py
 #  - python content_extract.py
   # - python $TRAVIS_BUILD_DIR/src/backend/Models.py
   # - python $TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py &
