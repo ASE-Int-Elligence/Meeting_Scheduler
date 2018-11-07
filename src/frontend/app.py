@@ -116,7 +116,7 @@ class SampleApp(tk.Tk):
         # do login code here, check if login works or not
         r = requests.post("http://localhost/login", data={'username': self.user_id, 'password': self.pwd})
         
-        if True:
+        if False:
             load_homepage()
         else:
             messagebox.showinfo("Error", "Wrong Credentials !")
