@@ -23,8 +23,9 @@ script:
   # - xvfb-run python $TRAVIS_BUILD_DIR/src/frontend/app.py &
   # - prospector --strictness veryhigh
   # - pytest
-  - bash scripts/post_commit.sh
-
+  bash scripts/post_commit.sh
+  on:
+    branch: master
 #  - python content_extract.py
   # - python $TRAVIS_BUILD_DIR/src/backend/Models.py
   # - python $TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py &
