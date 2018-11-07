@@ -13,10 +13,10 @@ commit_log_files() {
 }
 
 upload_files() {
-    git remote add https://${GH_TOKEN}@github.com/ASE-Int-Elligence/Meeting_Scheduler.git
+    git remote add origin-logs https://${GH_TOKEN}@github.com/ASE-Int-Elligence/Meeting_Scheduler.git
 #   git remote add origin-logs https://${GH_TOKEN}@github.com/ASE-Int-Elligence/Meeting_Scheduler.git > /dev/null 2>&1
     # git push --quiet --set-upstream origin-logs master
-    git push origin master
+    git push origin-logs master
 }
 
 setup_git
