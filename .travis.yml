@@ -1,37 +1,18 @@
 language: python
 python:
-  - "3.6"
-
-# services:
-# - mysql
-
-# command to install dependencies
+- '3.6'
 install:
-  - pip install -r requirements.txt
-  - python setup.py install
-  # - pip install -e
-# command to run tests
-
+- pip install -r requirements.txt
+- python setup.py install
 before_script:
-  # - mysql -u travis --password="" < scripts/travis.sql
-  - export FLASK_APP="$TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py"
-  - export FLASK_DEBUG=1
-  - python $TRAVIS_BUILD_DIR/src/backend/Models.py
+- export FLASK_APP="$TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py"
+- export FLASK_DEBUG=1
+- python $TRAVIS_BUILD_DIR/src/backend/Models.py
+script:
+- bash scripts/post_commit.sh
+env:
+  global:
+    secure: W5NSWJXSITrnjnIX4KqBzG+8bqlygNe+hSNbpM1n08pmZJmCMAAen7SqkaMxtKKV0PbEQLd+ysrHDHCRxRKCxeXNPzWsG9nXhV3ScY/S8Lqa08R2qXjhmvcphFeGK6Q5AY5UzFGXME7HRLv67t4IxasUnXB0QhQ4JISAR53I4AHWuYLlBvrjsrWjjCnHUn9jL/0IrnIPIzum6J6kTiLgVIO6qCqQMmQSRWSA//sDwEHg43otqZrWkOYJ6s8KmS7LySOdR+9vjAP/JA6iwKDarrpu60M4kdcvrl6fYsEEi8m0Uc0ELWm1irN9tLZIi5qw19je6j8JIv5JEwT9xNTATDgj65zvIVWHkY5ZfckWfNSkti0siklxlZ4YrhTsh2g+P5xcAoS1JGEp2kMbNe7CpQsHNKkSY0jJuIXl7326ObaKfZfmnwSLa79gUeqBIEeL+t6aAaaX1WYgs0uaNa7CsxPcjmzF7DaFI8Fgx0vIBx0JROYxE/hc0ip7uvZDVBbc+GpDrgW6ULKi2rNyALyr2BzIm1cNqTFJsblo0LNremAMZSG0+lzZ7R3CH7dBeQYM59gMY1eor1YcvSwPZju0i/YbCsOMBK7ivDJNSN1jEIh/rT1uT4vBh15VNOklkEjNr3tj0zEy/3FrBG3mukVrcI5M71LbP9arbsaEH86Rrq4=
 
-
-script: 
-  # - xvfb-run python $TRAVIS_BUILD_DIR/src/frontend/app.py &
-  # - prospector --strictness veryhigh
-  # - pytest
-  bash scripts/post_commit.sh
-  on:
-    branch: master
-#  - python content_extract.py
-  # - python $TRAVIS_BUILD_DIR/src/backend/Models.py
-  # - python $TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py &
-  # - PID=$!
-  # - sleep 2
-  # - kill $PID
-  # - pytest
-  # - xvfb-run python $TRAVIS_BUILD_DIR/src/frontend/app.py
-  # - python $TRAVIS_BUILD_DIR/src/frontend/app.py
+after_success:
+  - scripts/push.sh
