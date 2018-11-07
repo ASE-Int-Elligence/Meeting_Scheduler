@@ -6,8 +6,8 @@ setup_git() {
 }
 
 commit_log_files() {
-    git pull
-#   git checkout -b master
+    # git pull
+    git checkout -b origin-logs
     git add . *.log
     git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
