@@ -107,13 +107,3 @@ class Home_page(object):
 		self.add_user = Button(self.groups, text = "Find User", command = self.create_popup)
 		self.add_user.place( relx = 0.65, rely = 0.55, anchor = CENTER)
 		
-
-		
-
-
-
-
-		
-
-
->>>>>>> Work in progress for displaying the groups in the homepage
