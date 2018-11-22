@@ -76,12 +76,13 @@ def display_members():
 @app.route('/display_groups', methods = ['POST'])      #print all groups that user belongs to
 def display_groups():
     in_args, fields, body = parse_and_print_args()
-    res= ase_BO.find_groups("user_credentials",body)
+    res= Database_op.find_groups("user_credentials",body)
     ans = {}
     i = 0
     for r in res:
         ans[str(i)] = r
         i = i + 1
+    print (ans)
     return json.dumps(ans), 200, {"content-type": "application/json; charset: utf-8"}
 
 @app.route('/individual_groups', methods = ['POST'])      #print all user_details where users belong to that group

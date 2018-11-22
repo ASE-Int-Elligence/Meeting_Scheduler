@@ -21,19 +21,25 @@ class Home_page(object):
 		self.root.nb.add( self.groups, text = 'Groups')
 		self.root.nb.add( self.meetings, text = 'Meetings')
 		self.root.nb.pack( expand = 1, fill = "both")
+		self.get_groups_page()
 
 	def get_groups_page(self):
 		try:
 			r = requests.post("http://127.0.0.1:5000/display_groups", data=json.dumps({'username': self.root.userid}))
+			print (r.status_code)
 			if r.status_code == 200:
+<<<<<<< HEAD
 				self.frame.destroy()
 				#self.root.load_home_page()
+=======
+				print ("Chandana is a genius")
+				# self.frame.destroy()
+				print ("1")
+				#self.root.load_home_page()
+				#print ("2")
+				#	print (r)
+>>>>>>> Changes from Srujan
 			else:
-				messagebox.showinfo("Error", "Wrong Credentials !")
+				messagebox.showinfo("Error", "Brooo !")
 		except:
 			messagebox.showinfo("Error", "Not Connected to Internet !")
-
-
-		
-
-

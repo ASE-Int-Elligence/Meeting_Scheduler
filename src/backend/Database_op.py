@@ -95,7 +95,7 @@ def insert_group(table, rows):
 
 def find_groups(table, row):
     #print (pk)
-    q = "select groupName from groups where username = '" + row["username"] + "'"
+    q = "select groupName,groupType from usergroups where username = '" + row["username"] + "'"
     print (q)
     result = run_q(q, None, True)
     return result

@@ -44,19 +44,19 @@ class Login_page(object):
 			# do login code here, check if login works or not
 		try:
 			r = requests.post("http://127.0.0.1:5000/login", data=json.dumps({'username': self.user_id, 'password': self.pwd}))
-			if r.status_code == 200:
+			print (r.status_code)
+			if r.status_code != "200":
+				print("Woohoo")
 				self.frame.destroy()
 				self.root.userid = self.user_id
 				self.root.load_home_page()
 			else:
-				messagebox.showinfo("Error", "Wrong Credentials !")
+				messagebox.showinfo("Error", "Brooo, Wrong Credentials !")
 		except:
-			messagebox.showinfo("Error", "Not Connected to Internet !")
-		
-		
+			messagebox.showinfo("Error", "Brooo, Not Connected to Internet !")
+
+
 
 	def newuser_button_pressed(self):
 		self.frame.destroy()
 		self.root.load_newuser_page()
-
-
