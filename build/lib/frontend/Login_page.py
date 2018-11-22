@@ -16,8 +16,8 @@ class Login_page(object):
 		self.root = kinter
 		self.frame = Frame(self.root, width = 600, height = 600)
 		self.frame.pack(side = LEFT)
- 		self.frame.columnconfigure(0, {'minsize': 150})
- 		self.frame.rowconfigure(3, {'minsize': 30})
+		self.frame.columnconfigure(0, {'minsize': 150})
+		self.frame.rowconfigure(3, {'minsize': 30})
 
 	def get_page(self, kinter):
 		self.setRoot(kinter)
