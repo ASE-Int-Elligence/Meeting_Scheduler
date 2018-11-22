@@ -41,7 +41,7 @@ class Login_page(object):
 		self.pwd = self.password_entry.get()
 		if self.user_id == "" or self.pwd == "":
 			messagebox.showinfo("Error", "Fields cannot be empty")
-			# do login code here, check if login works or not
+
 		try:
 			r = requests.post("http://127.0.0.1:5000/login", data=json.dumps({'username': self.user_id, 'password': self.pwd}))
 			print (r.status_code)
@@ -56,7 +56,7 @@ class Login_page(object):
 			messagebox.showinfo("Error", "Brooo, Not Connected to Internet !")
 
 
-
 	def newuser_button_pressed(self):
 		self.frame.destroy()
 		self.root.load_newuser_page()
+

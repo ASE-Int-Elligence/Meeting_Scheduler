@@ -1,3 +1,5 @@
 src/backend/__pychache__
 tests/__pychache__
 .vscode
+*/__pycache__
+*.pyc
