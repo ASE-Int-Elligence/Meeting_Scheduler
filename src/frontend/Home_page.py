@@ -6,7 +6,7 @@ from tkinter import messagebox
 import requests
 import json
 from tkinter.scrolledtext import ScrolledText
-from Tabs import *
+#from Tabs import *
 
 
 class Home_page(object):
@@ -27,7 +27,7 @@ class Home_page(object):
 			r = requests.post("http://127.0.0.1:5000/display_groups", data=json.dumps({'username': self.root.userid}))
 			if r.status_code == 200:
 				self.frame.destroy()
-				self.root.load_home_page()
+				#self.root.load_home_page()
 			else:
 				messagebox.showinfo("Error", "Wrong Credentials !")
 		except:
