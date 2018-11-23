@@ -16,6 +16,7 @@ class SampleApp(tk.Tk):
         self.nb = ttk.Notebook(self)
         # self.nb.pack
         self.load_login_page()
+        
         self.userid = ""
                 
 

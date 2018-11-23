@@ -2,8 +2,8 @@ import pymysql
 import json
 
 cnx = pymysql.connect(host='localhost',
-                              user='int_elligence',
-                              password='int_elligence',
+                              user='dbuser',
+                              password='dbuser',
                               db='ase_project',
                               charset='utf8mb4',
                               cursorclass=pymysql.cursors.DictCursor)
@@ -69,25 +69,33 @@ def find_partial(table, row):
     result = run_q(q, None, True)
     return result
 
-def insert_group(table, row):
+def insert_group(table, rows):
+    i = 0
+    row = {}
+    row["groupName"]=rows["groupName"]
+    row["groupType"]=rows["groupType"]
     global group_id
     group_id += 1
-    row["groupID"] = str(group_id)
-    col_name = ""
-    val_name = ""
-    for name,val in row.items():
-        col_name = col_name + name + ","
-        val_name = val_name + "'" + val + "'" + ","
-    col_name = col_name[:-1]
-    val_name = val_name[:-1]
-    query = "INSERT INTO " + table + " (" + col_name + ") VALUES (" + val_name + ")"
-    result = run_q(query, None, True)
-    res = "Insert Successful"
+    for user in rows["users"]:
+
+        row['username'] = user
+        row["groupID"] = str(group_id)
+        col_name = ""
+        val_name = ""
+        for name,val in row.items():
+            col_name = col_name + name + ","
+            val_name = val_name + "'" + val + "'" + ","
+        col_name = col_name[:-1]
+        val_name = val_name[:-1]
+        query = "INSERT INTO " + table + " (" + col_name + ") VALUES (" + val_name + ")"
+        result = run_q(query, None, True)
+        res = "Insert Successful"
+
     return res
 
 def find_groups(table, row):
     #print (pk)
-    q = "select groupName from groups where username = '" + row["username"] + "'"
+    q = "select groupName,groupType from usergroups where username = '" + row["username"] + "'"
     print (q)
     result = run_q(q, None, True)
     return result

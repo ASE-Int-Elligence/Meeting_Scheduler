@@ -16,7 +16,7 @@ class Createuser_page(object):
 		self.root = kinter
 		self.frame = Frame(self.root, width = 600, height = 600)
 		self.frame.pack(side = LEFT)
- 		self.frame.columnconfigure(0, {'minsize': 150})
+		self.frame.columnconfigure(0, {'minsize': 150})
  		# self.frame.rowconfigure(3, {'minsize': 30})
 
 	def get_page(self, kinter):
@@ -76,15 +76,16 @@ class Createuser_page(object):
 			messagebox.showinfo("Error", "Passwords don't match")
 			return
 
-		r = requests.post("http://127.0.0.1:5000/signup", data=json.dumps({'username': self.new_user_id, 'password': self.new_user_pwd, 'nameFirst': firstName, 'nameLast': lastName, 'email': email}))
+		try:
+			r = requests.post("http://127.0.0.1:5000/signup", data=json.dumps({'username': self.new_user_id, 'password': self.new_user_pwd, 'nameFirst': firstName, 'nameLast': lastName, 'email': email}))
 
-		if r.status_code == 200:
-			messagebox.showinfo("Success", "User creation success !")
-		else:
-			messagebox.showinfo("Error", "User creation failed !")
+			if r.status_code == 200:
+				messagebox.showinfo("Success", "User creation success !")
+			else:
+				messagebox.showinfo("Error", "User creation failed !")
+		except:
+			messagebox.showinfo("Error", "Fields cannot be empty")
 
 	def go_back(self):
 		self.frame.destroy()
 		self.root.load_login_page()
-
-

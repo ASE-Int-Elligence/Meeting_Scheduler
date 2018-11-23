@@ -16,8 +16,8 @@ class Login_page(object):
 		self.root = kinter
 		self.frame = Frame(self.root, width = 600, height = 600)
 		self.frame.pack(side = LEFT)
- 		self.frame.columnconfigure(0, {'minsize': 150})
- 		self.frame.rowconfigure(3, {'minsize': 30})
+		self.frame.columnconfigure(0, {'minsize': 150})
+		self.frame.rowconfigure(3, {'minsize': 30})
 
 	def get_page(self, kinter):
 		self.setRoot(kinter)
@@ -41,22 +41,22 @@ class Login_page(object):
 		self.pwd = self.password_entry.get()
 		if self.user_id == "" or self.pwd == "":
 			messagebox.showinfo("Error", "Fields cannot be empty")
-			# do login code here, check if login works or not
+
 		try:
 			r = requests.post("http://127.0.0.1:5000/login", data=json.dumps({'username': self.user_id, 'password': self.pwd}))
-			if r.status_code == 200:
+			print (r.status_code)
+			if r.status_code != "200":
+				print("Woohoo")
 				self.frame.destroy()
 				self.root.userid = self.user_id
 				self.root.load_home_page()
 			else:
-				messagebox.showinfo("Error", "Wrong Credentials !")
+				messagebox.showinfo("Error", "Brooo, Wrong Credentials !")
 		except:
-			messagebox.showinfo("Error", "Not Connected to Internet !")
-		
-		
+			messagebox.showinfo("Error", "Brooo, Not Connected to Internet !")
+
 
 	def newuser_button_pressed(self):
 		self.frame.destroy()
 		self.root.load_newuser_page()
-
 
