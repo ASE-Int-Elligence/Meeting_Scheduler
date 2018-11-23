@@ -46,6 +46,7 @@ def signup_page():
     in_args, fields, body = parse_and_print_args()
     res= Database_op.insert("user_credentials",body)
     return "Signup successful"
+
 '''
 input for create groups
 {
@@ -60,6 +61,12 @@ def create_group():
     in_args, fields, body = parse_and_print_args()
     res= Database_op.insert_group("usergroups",body)
     return "Group Creation successful"
+
+@app.route('/add_users_to_group', methods = ['POST'])   ## Get default meeting-id in bodydef create_group(groupID,groupName,groupTypes):
+def add_users_to_group():
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.insert_group("usergroups",body)
+    return "User added to Group successfully"
 
 @app.route('/search_user', methods = ['POST'])
 def search_user():
@@ -84,6 +91,33 @@ def display_groups():
         i = i + 1
     return json.dumps(ans), 200, {"content-type": "application/json; charset: utf-8"}
 
+'''
+input for upated_group: updated values corresponding to each value
+{
+    "groupName": "Sample group",
+    "groupType":"Personal"
+}
+'''
+'''
+we query with where clause on body["groupID"]
+'''
+@app.route('/update_group', methods = ['PUT']) 
+def update_group():
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.update_group_info("usergroups",body)
+    return "Group Updation successful"
+
+'''
+we query with where clause on body["groupID"]
+'''
+
+@app.route('/remove_group/groupID', methods = ['POST']) 
+def remove_group(groupID):
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.remove_group("usergroups",groupID)
+    return "Group deletion successful"
+
+
 @app.route('/individual_groups', methods = ['POST'])      #print all user_details where users belong to that group
 def ind_groups():
     in_args, fields, body = parse_and_print_args()
@@ -94,6 +128,35 @@ def ind_groups():
         ans[str(i)] = r
         i = i + 1
     return json.dumps(ans), 200, {"content-type": "application/json; charset: utf-8"}
+
+@app.route('/create_meeting', methods = ['POST'])   ## Get default meeting-id in body
+def create_meeting():
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.create_meeting("meeting",body)
+    return "Meeting Creation successful"
+
+'''
+sample input (body)
+{
+            "meetingID":"1",
+            "username": "priya",
+            "meetingLoc":"location string",
+            "groupID":"1",
+            "meetingname":"ASE project discussion"
+}
+'''
+
+@app.route('/update_meeting', methods = ['PUT']) 
+def update_meeting():
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.update_meeting_info("meeting",body)
+    return "Group Updation successful"
+
+@app.route('/remove_meeting/<meetingID>', methods = ['POST']) 
+def remove_meeting(meetingID):
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.remove_meeting("meeting",meetingID)
+    return res
 
 if __name__ == '__main__':
     app.run()

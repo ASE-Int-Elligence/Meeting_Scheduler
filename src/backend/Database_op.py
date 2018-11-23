@@ -9,6 +9,7 @@ cnx = pymysql.connect(host='localhost',
                               cursorclass=pymysql.cursors.DictCursor)
 
 group_id = 0
+meeting_id = 0
 
 def run_q(q, args, fetch=False):
     cursor = cnx.cursor()
@@ -89,9 +90,29 @@ def insert_group(table, rows):
         val_name = val_name[:-1]
         query = "INSERT INTO " + table + " (" + col_name + ") VALUES (" + val_name + ")"
         result = run_q(query, None, True)
-        res = "Insert Successful"
+        res = "Group Creation Successful"
 
     return res
+
+def update_group_info(table, data_template):
+    
+    set_values = ""
+    for column,value in data_template.items():
+        set_values += ""+column+"="+"'"+value+"'" + ", "
+    set_values = set_values[:-2]
+    update_string = "SET "+set_values
+    sql = "update " + table + "  " + update_string + " " + "where groupID = "+"'"+data_template["groupID"]+"'"
+    print(sql)
+    result = run_q(sql, None, True)
+    return "Updated Group"
+
+def remove_group(table, groupID ):
+    
+    sql = "delete from " + table + "where groupID = "+"'"+groupID+"'"
+    print(sql)
+    result = run_q(sql, None, True)
+    return "Deleted Group"
+
 
 def find_groups(table, row):
     #print (pk)
@@ -113,3 +134,42 @@ def print_indgroups(table, row):
     print (q)
     result = run_q(q, None, True)
     return result
+
+def create_meeting(table,row):
+    
+    global meeting_id
+    meeting_id += 1
+
+    row["meetingID"] = str(meeting_id)
+    col_name = ""
+    val_name = ""
+    for name,val in row.items():
+        col_name = col_name + name + ","
+        val_name = val_name + "'" + val + "'" + ","
+    col_name = col_name[:-1]
+    val_name = val_name[:-1]
+    query = "INSERT INTO " + table + " (" + col_name + ") VALUES (" + val_name + ")"
+    result = run_q(query, None, True)
+    res = "Meeting Creation Successful"
+
+    return res
+
+def update_meeting_info(table, data_template):
+    
+    set_values = ""
+    for column,value in data_template.items():
+        set_values += ""+column+"="+"'"+value+"'" + ", "
+    set_values = set_values[:-2]
+    update_string = "SET "+set_values
+    sql = "update " + table + "  " + update_string + " " + "where meetingID = "+"'"+data_template["meetingID"]+"'"
+    print(sql)
+    result = run_q(sql, None, True)
+    return "Updated Meeting"
+
+def remove_meeting(table, meetingID ):
+    
+    sql = "delete from " + table + " where meetingID = "+"'"+meetingID+"'"
+    print(sql)
+    result = run_q(sql, None, True)
+    return "Deleted Meeting"
+
