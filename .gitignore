@@ -4,3 +4,6 @@ tests/__pychache__
 src/backend/config.py
 src/backend/token.json
 src/backend/credentials.json
+*/__pycache__
+*.pyc
+.DS_Store

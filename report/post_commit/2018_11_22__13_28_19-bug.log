@@ -1,0 +1,1138 @@
+Messages
+========
+
+backend/Database_op.py
+  Line: 1
+    pylint: invalid-name / Module name "Database_op" doesn't conform to snake_case naming style
+  Line: 2
+    pylint: wrong-import-order / standard import "import json" should be placed before "import pymysql"
+    pylint: unused-import / Unused import json
+  Line: 4
+    pylint: invalid-name / Constant name "cnx" doesn't conform to UPPER_CASE naming style
+  Line: 5
+    pep8: E127 / continuation line over-indented for visual indent (col 31)
+  Line: 6
+    pep8: E127 / continuation line over-indented for visual indent (col 31)
+  Line: 7
+    pep8: E127 / continuation line over-indented for visual indent (col 31)
+  Line: 8
+    pep8: E127 / continuation line over-indented for visual indent (col 31)
+  Line: 9
+    pep8: E127 / continuation line over-indented for visual indent (col 31)
+  Line: 11
+    pylint: invalid-name / Constant name "group_id" doesn't conform to UPPER_CASE naming style
+  Line: 13
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: invalid-name / Argument name "q" doesn't conform to snake_case naming style
+  Line: 23
+    pep8: N802 / function name should be lowercase (col 5)
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: invalid-name / Function name "templateToWhereClause_old" doesn't conform to snake_case naming style
+  Line: 24
+    pylint: invalid-name / Variable name "s" doesn't conform to snake_case naming style (col 4)
+  Line: 25
+    pep8: E231 / missing whitespace after ',' (col 11)
+    pylint: invalid-name / Variable name "v" doesn't conform to snake_case naming style (col 11)
+  Line: 27
+    pylint: invalid-name / Variable name "s" doesn't conform to snake_case naming style (col 12)
+  Line: 28
+    pylint: invalid-name / Variable name "s" doesn't conform to snake_case naming style (col 8)
+  Line: 31
+    pep8: E703 / statement ends with a semicolon (col 25)
+    pylint: invalid-name / Variable name "s" doesn't conform to snake_case naming style (col 8)
+  Line: 32
+    pep8: E265 / block comment should start with '# ' (col 5)
+  Line: 35
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 33)
+    pylint: invalid-name / Argument name "pk" doesn't conform to snake_case naming style
+  Line: 36
+    pep8: E265 / block comment should start with '# ' (col 5)
+  Line: 37
+    pep8: E501 / line too long (171 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 4)
+  Line: 39
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (primarykeys)
+          ^ (col 10)
+  Line: 42
+    pylint: invalid-name / Variable name "wc" doesn't conform to snake_case naming style (col 4)
+  Line: 43
+    pep8: E711 / comparison to None should be 'if cond is None:' (col 15)
+    pylint: singleton-comparison / Comparison to None should be 'expr is None' (col 7)
+  Line: 44
+    pep8: E225 / missing whitespace around operator (col 29)
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 8)
+  Line: 46
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 8)
+  Line: 47
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (q)
+          ^ (col 10)
+  Line: 51
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 54
+    pep8: E231 / missing whitespace after ',' (col 13)
+  Line: 59
+    pep8: E501 / line too long (85 > 79 characters) (col 80)
+  Line: 60
+    pylint: unused-variable / Unused variable 'result' (col 4)
+  Line: 64
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: unused-argument / Unused argument 'table' (col 17)
+  Line: 65
+    pep8: E265 / block comment should start with '# ' (col 5)
+  Line: 67
+    pep8: E501 / line too long (86 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 4)
+  Line: 68
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (q)
+          ^ (col 10)
+  Line: 72
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 73
+    pylint: unused-variable / Unused variable 'i' (col 4)
+  Line: 75
+    pep8: E225 / missing whitespace around operator (col 21)
+  Line: 76
+    pep8: E225 / missing whitespace around operator (col 21)
+  Line: 77
+    pylint: global-statement / Using the global statement (col 4)
+    pylint: invalid-name / Constant name "group_id" doesn't conform to UPPER_CASE naming style (col 4)
+  Line: 85
+    pep8: E231 / missing whitespace after ',' (col 17)
+  Line: 90
+    pep8: E501 / line too long (88 > 79 characters) (col 80)
+  Line: 91
+    pylint: unused-variable / Unused variable 'result' (col 8)
+  Line: 96
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: unused-argument / Unused argument 'table' (col 16)
+  Line: 97
+    pep8: E265 / block comment should start with '# ' (col 5)
+  Line: 98
+    pep8: E501 / line too long (95 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 4)
+  Line: 99
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (q)
+          ^ (col 10)
+  Line: 103
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: unused-argument / Unused argument 'table' (col 21)
+  Line: 104
+    pep8: E265 / block comment should start with '# ' (col 5)
+  Line: 105
+    pep8: E501 / line too long (229 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 4)
+  Line: 106
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (q)
+          ^ (col 10)
+  Line: 110
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: unused-argument / Unused argument 'table' (col 20)
+  Line: 111
+    pep8: E265 / block comment should start with '# ' (col 5)
+  Line: 112
+    pep8: E501 / line too long (219 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "q" doesn't conform to snake_case naming style (col 4)
+  Line: 113
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (q)
+          ^ (col 10)
+
+backend/Models.py
+  Line: 1
+    pylint: unused-import / Unused Flask imported from flask
+    pylint: invalid-name / Module name "Models" doesn't conform to snake_case naming style
+  Line: 10
+    pylint: invalid-name / Constant name "db" doesn't conform to UPPER_CASE naming style
+  Line: 21
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+    pep8: E501 / line too long (84 > 79 characters) (col 80)
+  Line: 31
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 46
+    pep8: E501 / line too long (115 > 79 characters) (col 80)
+    pylint: invalid-name / Constant name "new_user" doesn't conform to UPPER_CASE naming style (col 4)
+  Line: 49
+    pep8: W391 / blank line at end of file (col 1)
+    pylint: trailing-newlines / Trailing newlines
+
+backend/__init__.py
+  Line: 3
+    pep8: W292 / no newline at end of file (col 22)
+    pylint: invalid-name / Constant name "app" doesn't conform to UPPER_CASE naming style
+
+backend/ase_project.py
+  Line: 6
+    pylint: wrong-import-order / standard import "import copy" should be placed before "from flask import Flask"
+  Line: 8
+    pylint: import-error / Unable to import 'requests'
+    pylint: unused-import / Unused import requests
+  Line: 11
+    pylint: invalid-name / Constant name "app" doesn't conform to UPPER_CASE naming style
+  Line: 13
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 20
+    pylint: superfluous-parens / Unnecessary parens after 'del' keyword
+  Line: 22
+    pep8: E211 / whitespace before '(' (col 14)
+    pylint: bad-whitespace / No space allowed before bracket
+        print (request)
+              ^ (col 14)
+  Line: 27
+    pylint: broad-except / Catching too general exception Exception (col 11)
+    pylint: invalid-name / Variable name "e" doesn't conform to snake_case naming style (col 4)
+  Line: 28
+    pep8: E211 / whitespace before '(' (col 14)
+    pylint: bad-whitespace / No space allowed before bracket
+        print ("Got exception = ", e)
+              ^ (col 14)
+  Line: 30
+    pep8: E231 / missing whitespace after ',' (col 28)
+  Line: 34
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 29)
+  Line: 36
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 38
+    pep8: E231 / missing whitespace after ',' (col 51)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 39
+    pylint: no-else-return / Unnecessary "else" after "return" (col 4)
+  Line: 40
+    pep8: E501 / line too long (104 > 79 characters) (col 80)
+  Line: 42
+    pep8: E501 / line too long (100 > 79 characters) (col 80)
+  Line: 44
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 30)
+  Line: 46
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 47
+    pylint: unused-variable / Unused variable 'res' (col 4)
+    pep8: E231 / missing whitespace after ',' (col 47)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 49
+    pep8: E305 / expected 2 blank lines after class or function definition, found 0 (col 1)
+  Line: 56
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 58
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E262 / inline comment should start with '# ' (col 51)
+    pep8: E501 / line too long (83 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 36)
+  Line: 60
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 61
+    pylint: unused-variable / Unused variable 'res' (col 4)
+    pep8: E231 / missing whitespace after ',' (col 47)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 64
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 35)
+  Line: 66
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 67
+    pep8: E231 / missing whitespace after ',' (col 53)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 68
+    pep8: E501 / line too long (85 > 79 characters) (col 80)
+  Line: 70
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E262 / inline comment should start with '# ' (col 57)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 39)
+  Line: 72
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 73
+    pep8: E231 / missing whitespace after ',' (col 53)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 74
+    pep8: E501 / line too long (85 > 79 characters) (col 80)
+  Line: 76
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E262 / inline comment should start with '# ' (col 56)
+    pep8: E501 / line too long (93 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 78
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 79
+    pep8: E231 / missing whitespace after ',' (col 52)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 82
+    pylint: invalid-name / Variable name "r" doesn't conform to snake_case naming style (col 8)
+  Line: 85
+    pep8: E211 / whitespace before '(' (col 10)
+    pylint: bad-whitespace / No space allowed before bracket
+    print (ans)
+          ^ (col 10)
+  Line: 86
+    pep8: E501 / line too long (85 > 79 characters) (col 80)
+  Line: 88
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: E262 / inline comment should start with '# ' (col 59)
+    pep8: E501 / line too long (114 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 41)
+  Line: 90
+    pylint: unused-variable / Unused variable 'in_args' (col 4)
+  Line: 91
+    pep8: E231 / missing whitespace after ',' (col 56)
+    pep8: E225 / missing whitespace around operator (col 8)
+  Line: 94
+    pylint: invalid-name / Variable name "r" doesn't conform to snake_case naming style (col 8)
+  Line: 97
+    pep8: E501 / line too long (85 > 79 characters) (col 80)
+  Line: 99
+    pep8: E305 / expected 2 blank lines after class or function definition, found 1 (col 1)
+
+backend/login.py
+  Line: 26
+    pep8: E501 / line too long (86 > 79 characters) (col 80)
+  Line: 31
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 33
+    pylint: no-else-return / Unnecessary "else" after "return" (col 4)
+  Line: 36
+    pylint: no-else-return / Unnecessary "else" after "return" (col 8)
+    pylint: simplifiable-if-statement / The if statement can be replaced with 'return bool(test)' (col 8)
+  Line: 41
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 43
+    pylint: no-else-return / Unnecessary "else" after "return" (col 4)
+  Line: 46
+    pylint: no-else-return / Unnecessary "else" after "return" (col 8)
+    pylint: simplifiable-if-statement / The if statement can be replaced with 'return bool(test)' (col 8)
+  Line: 51
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 54
+    pep8: E501 / line too long (106 > 79 characters) (col 80)
+  Line: 58
+    pep8: E305 / expected 2 blank lines after class or function definition, found 1 (col 1)
+  Line: 62
+    pep8: W391 / blank line at end of file (col 1)
+    pylint: trailing-newlines / Trailing newlines
+
+backend/meeting_scheduler_flask.py
+  Line: 1
+    pylint: unused-import / Unused Flask imported from flask
+    pep8: E501 / line too long (85 > 79 characters) (col 80)
+  Line: 6
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 8
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 10
+    pep8: E305 / expected 2 blank lines after class or function definition, found 1 (col 1)
+  Line: 11
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W292 / no newline at end of file (col 25)
+
+frontend/Createuser_page.py
+  Line: None
+    pep8: E101 / indentation contains mixed spaces and tabs (col 1)
+  Line: 1
+    pylint: invalid-name / Module name "Createuser_page" doesn't conform to snake_case naming style
+  Line: 2
+    pylint: unused-wildcard-import / Unused imports from wildcard import: enum, sys, TclError, re, wantobjects, TkVersion, TclVersion, READABLE, WRITABLE, EXCEPTION, EventType, Event, NoDefaultRoot, Variable, StringVar, IntVar, DoubleVar, BooleanVar, mainloop, getint, getdouble, getboolean, Misc, CallWrapper, XView, YView, Wm, Tk, Tcl, Pack, Place, Grid, BaseWidget, Widget, Toplevel, Canvas, Checkbutton, Listbox, Menu, Menubutton, Message, Radiobutton, Scale, Scrollbar, Text, OptionMenu, Image, PhotoImage, BitmapImage, image_names, image_types, Spinbox, LabelFrame, PanedWindow, NO, FALSE, OFF, YES, TRUE, ON, N, S, W, E, NW, SW, NE, SE, NS, EW, NSEW, NONE, X, Y, BOTH, TOP, RIGHT, BOTTOM, RAISED, SUNKEN, FLAT, RIDGE, GROOVE, SOLID, HORIZONTAL, VERTICAL, NUMERIC, CHAR, WORD, BASELINE, INSIDE, OUTSIDE, SEL, SEL_FIRST, SEL_LAST, END, INSERT, CURRENT, ANCHOR, ALL, NORMAL, DISABLED, ACTIVE, HIDDEN, CASCADE, CHECKBUTTON, COMMAND, RADIOBUTTON, SEPARATOR, SINGLE, BROWSE, MULTIPLE, EXTENDED, DOTBOX, UNDERLINE, PIESLICE, CHORD, ARC, FIRST, LAST, BUTT, PROJECTING, ROUND, BEVEL, MITER, MOVETO, SCROLL, UNITS, PAGES
+    pylint: wildcard-import / Wildcard import tkinter
+  Line: 3
+    pylint: unused-import / Unused ttk imported from tkinter
+  Line: 4
+    pylint: unused-import / Unused tkinter imported as tk
+  Line: 6
+    pylint: import-error / Unable to import 'requests'
+  Line: 7
+    pylint: wrong-import-order / standard import "import json" should be placed before "import requests"
+  Line: 10
+    pylint: too-many-instance-attributes / Too many instance attributes (18/7)
+    pylint: useless-object-inheritance / Class 'Createuser_page' inherits from object, can be safely removed from bases in python3
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 12
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 13
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 15
+    pep8: N802 / function name should be lowercase (col 6)
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: invalid-name / Method name "setRoot" doesn't conform to snake_case naming style (col 1)
+  Line: 16
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'root' defined outside __init__ (col 2)
+  Line: 17
+    pep8: W191 / indentation contains tabs (col 1)
+    pyflakes: F999 / 'Frame' may be undefined, or defined from star imports: tkinter (col 16)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 18
+    pep8: W191 / indentation contains tabs (col 1)
+    pyflakes: F999 / 'LEFT' may be undefined, or defined from star imports: tkinter (col 26)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 23)
+  Line: 19
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 20
+    pep8: W191 / indentation contains tabs (col 2)
+  Line: 22
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 23
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 25
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 35)
+    pylint: attribute-defined-outside-init / Attribute 'nu_firstname_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 29)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 52)
+  Line: 26
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 33)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 67)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 27
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 35)
+    pylint: attribute-defined-outside-init / Attribute 'nu_firstname_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 29)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.nu_firstname_entry = Entry( self.frame)
+                                 ^ (col 33)
+  Line: 28
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 33)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 68)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 30
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pylint: attribute-defined-outside-init / Attribute 'nu_lastname_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 28)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 51)
+  Line: 31
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 67)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 37)
+  Line: 32
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pylint: attribute-defined-outside-init / Attribute 'nu_lastname_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 28)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.nu_lastname_entry = Entry( self.frame)
+                                ^ (col 32)
+  Line: 33
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 68)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 37)
+  Line: 35
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pylint: attribute-defined-outside-init / Attribute 'nu_username_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 28)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 51)
+  Line: 36
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 66)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 37)
+  Line: 37
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pylint: attribute-defined-outside-init / Attribute 'nu_username_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 28)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.nu_username_entry = Entry( self.frame)
+                                ^ (col 32)
+  Line: 38
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 67)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 37)
+  Line: 40
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pylint: attribute-defined-outside-init / Attribute 'nu_email_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 25)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 48)
+  Line: 41
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 29)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 64)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 34)
+  Line: 42
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pylint: attribute-defined-outside-init / Attribute 'nu_email_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 25)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.nu_email_entry = Entry( self.frame)
+                             ^ (col 29)
+  Line: 43
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 29)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 65)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 34)
+  Line: 45
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pylint: attribute-defined-outside-init / Attribute 'nu_password_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 28)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 51)
+  Line: 46
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 66)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 37)
+  Line: 47
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pylint: attribute-defined-outside-init / Attribute 'nu_password_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 28)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 51)
+  Line: 48
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 67)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 37)
+  Line: 50
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 42)
+    pylint: attribute-defined-outside-init / Attribute 'nu_password_confirm_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 36)
+    pep8: E501 / line too long (80 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 59)
+  Line: 51
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 40)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 75)
+    pep8: E501 / line too long (81 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 45)
+  Line: 52
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 42)
+    pylint: attribute-defined-outside-init / Attribute 'nu_password_confirm_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 36)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 59)
+  Line: 53
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 40)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 76)
+    pep8: E501 / line too long (82 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 45)
+  Line: 55
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 34)
+    pep8: E202 / whitespace before ')' (col 106)
+    pylint: attribute-defined-outside-init / Attribute 'nu_create_button' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Button' may be undefined, or defined from star imports: tkinter (col 27)
+    pep8: E501 / line too long (107 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 51)
+  Line: 56
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 66)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 36)
+  Line: 58
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pep8: E202 / whitespace before ')' (col 85)
+    pylint: attribute-defined-outside-init / Attribute 'nu_back_button' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Button' may be undefined, or defined from star imports: tkinter (col 25)
+    pep8: E501 / line too long (86 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 49)
+  Line: 59
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 29)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 65)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 34)
+  Line: 61
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 63
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'new_user_id' defined outside __init__ (col 2)
+  Line: 64
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'new_user_pwd' defined outside __init__ (col 2)
+  Line: 65
+    pep8: N806 / variable in function should be lowercase (col 3)
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: invalid-name / Variable name "firstName" doesn't conform to snake_case naming style (col 2)
+  Line: 66
+    pep8: N806 / variable in function should be lowercase (col 3)
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: invalid-name / Variable name "lastName" doesn't conform to snake_case naming style (col 2)
+  Line: 67
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 69
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (132 > 79 characters) (col 80)
+  Line: 70
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 71
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 73
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 74
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 75
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 76
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 77
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 79
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 80
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (194 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "r" doesn't conform to snake_case naming style (col 3)
+  Line: 82
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 83
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 84
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 85
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 86
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: bare-except / No exception type(s) specified (col 2)
+  Line: 87
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 89
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 90
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 91
+    pep8: W191 / indentation contains tabs (col 1)
+
+frontend/Home_page.py
+  Line: None
+    pep8: E101 / indentation contains mixed spaces and tabs (col 4)
+  Line: 1
+    pylint: invalid-name / Module name "Home_page" doesn't conform to snake_case naming style
+  Line: 2
+    pylint: unused-wildcard-import / Unused imports from wildcard import: enum, sys, TclError, re, wantobjects, TkVersion, TclVersion, READABLE, WRITABLE, EXCEPTION, EventType, Event, NoDefaultRoot, Variable, StringVar, DoubleVar, BooleanVar, mainloop, getint, getdouble, getboolean, Misc, CallWrapper, XView, YView, Wm, Tk, Tcl, Pack, Place, Grid, BaseWidget, Widget, Toplevel, Canvas, Checkbutton, Listbox, Menu, Menubutton, Message, Scale, Text, OptionMenu, Image, PhotoImage, BitmapImage, image_names, image_types, Spinbox, PanedWindow, NO, FALSE, OFF, YES, TRUE, ON, N, S, W, E, NW, SW, NE, SE, NS, EW, NSEW, NONE, X, BOTH, LEFT, TOP, RAISED, SUNKEN, FLAT, RIDGE, GROOVE, SOLID, HORIZONTAL, VERTICAL, NUMERIC, CHAR, WORD, BASELINE, INSIDE, OUTSIDE, SEL, SEL_FIRST, SEL_LAST, END, INSERT, CURRENT, ANCHOR, ALL, NORMAL, DISABLED, ACTIVE, HIDDEN, CASCADE, CHECKBUTTON, COMMAND, RADIOBUTTON, SEPARATOR, SINGLE, BROWSE, MULTIPLE, EXTENDED, DOTBOX, UNDERLINE, PIESLICE, CHORD, ARC, FIRST, LAST, BUTT, PROJECTING, ROUND, BEVEL, MITER, MOVETO, SCROLL, UNITS, PAGES
+    pylint: wildcard-import / Wildcard import tkinter
+  Line: 3
+    pylint: unused-import / Unused ttk imported from tkinter
+  Line: 6
+    pylint: import-error / Unable to import 'requests'
+  Line: 7
+    pylint: wrong-import-order / standard import "import json" should be placed before "import requests"
+  Line: 8
+    pylint: ungrouped-imports / Imports from package tkinter are not grouped
+    pylint: wrong-import-order / standard import "from tkinter.scrolledtext import ScrolledText" should be placed before "import requests"
+    pylint: unused-import / Unused ScrolledText imported from tkinter.scrolledtext
+  Line: 10
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: too-many-instance-attributes / Too many instance attributes (16/7)
+    pylint: useless-object-inheritance / Class 'Home_page' inherits from object, can be safely removed from bases in python3
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 12
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 13
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 15
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 16
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'root' defined outside __init__ (col 2)
+  Line: 17
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 23)
+    pep8: E202 / whitespace before ')' (col 36)
+    pylint: attribute-defined-outside-init / Attribute 'groups' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Frame' may be undefined, or defined from star imports: tkinter (col 17)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.groups = Frame( self.root.nb )
+                     ^ (col 21)
+  Line: 18
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 25)
+    pep8: E202 / whitespace before ')' (col 38)
+    pylint: attribute-defined-outside-init / Attribute 'meetings' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Frame' may be undefined, or defined from star imports: tkinter (col 19)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.meetings = Frame( self.root.nb )
+                       ^ (col 23)
+  Line: 19
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 20)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 20
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 20)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 40)
+  Line: 21
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 21)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 28)
+  Line: 22
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 24
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 25
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'scrollbar' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Scrollbar' may be undefined, or defined from star imports: tkinter (col 20)
+  Line: 26
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 23)
+    pep8: E202 / whitespace before ')' (col 46)
+    pyflakes: F999 / 'RIGHT' may be undefined, or defined from star imports: tkinter (col 31)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 28)
+  Line: 27
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 33)
+    pep8: E202 / whitespace before ')' (col 97)
+    pylint: attribute-defined-outside-init / Attribute 'nu_create_group' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Button' may be undefined, or defined from star imports: tkinter (col 26)
+    pep8: E501 / line too long (98 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 51)
+  Line: 28
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 29
+    pep8: W191 / indentation contains tabs (col 1)
+    pyflakes: F999 / 'BOTTOM' may be undefined, or defined from star imports: tkinter (col 36)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 33)
+  Line: 31
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 32
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 34
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 35
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (109 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "r" doesn't conform to snake_case naming style (col 3)
+  Line: 36
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E211 / whitespace before '(' (col 9)
+    pylint: bad-whitespace / No space allowed before bracket
+			print (r.status_code)
+         ^ (col 9)
+  Line: 37
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 38
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 39
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 40
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 41
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: bare-except / No exception type(s) specified (col 2)
+  Line: 42
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 45
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 47
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E303 / too many blank lines (4) (col 3)
+  Line: 49
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '[' (col 29)
+    pep8: E202 / whitespace before ']' (col 33)
+    pylint: unused-variable / Unused variable 'group_info' (col 3)
+    pylint: bad-whitespace / No space allowed after bracket
+			group_info = groups_info[ key ]
+                           ^ (col 27)
+  Line: 50
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 28)
+    pep8: E226 / missing whitespace around arithmetic operator (col 48)
+    pyflakes: F999 / 'LabelFrame' may be undefined, or defined from star imports: tkinter (col 17)
+    pylint: undefined-variable / Undefined variable 'root' (col 28)
+    pylint: bad-whitespace / No space allowed after bracket
+			labelframe = LabelFrame( root, text="Group "+str(key))
+                          ^ (col 26)
+  Line: 51
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 20)
+    pylint: bad-whitespace / No space allowed after bracket
+			labelframe.pack( fill="both", expand="yes")
+                  ^ (col 18)
+  Line: 52
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 24)
+    pylint: bad-whitespace / No space allowed after bracket
+			label_frames.append( labelframe)
+                      ^ (col 22)
+  Line: 53
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 54
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 17)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 11)
+    pylint: bad-whitespace / No space allowed after bracket
+			left = Label( label_frames[-1], text="Inside the LabelFrame")
+               ^ (col 15)
+  Line: 55
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 58
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E303 / too many blank lines (2) (col 2)
+  Line: 59
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 60
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 61
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 63
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E303 / too many blank lines (2) (col 2)
+    pylint: no-self-use / Method could be a function (col 1)
+  Line: 64
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 65
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 67
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 68
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'popup' defined outside __init__ (col 2)
+  Line: 69
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: unused-variable / Unused variable 'partial_name' (col 2)
+  Line: 71
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W291 / trailing whitespace (col 14)
+  Line: 72
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 74
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E303 / too many blank lines (2) (col 3)
+  Line: 76
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 77
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 78
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'group_type' defined outside __init__ (col 3)
+  Line: 79
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 80
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'group_type' defined outside __init__ (col 3)
+  Line: 82
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 84
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 85
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 87
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'var' defined outside __init__ (col 2)
+    pyflakes: F999 / 'IntVar' may be undefined, or defined from star imports: tkinter (col 14)
+  Line: 89
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'group_name_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 27)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 50)
+  Line: 90
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 65)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 36)
+  Line: 92
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'group_name_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 27)
+  Line: 93
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 65)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 36)
+  Line: 95
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'group_type_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 27)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 50)
+  Line: 96
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 65)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 36)
+  Line: 98
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'r1' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Radiobutton' may be undefined, or defined from star imports: tkinter (col 13)
+    pep8: E501 / line too long (114 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 61)
+    pylint: invalid-name / Attribute name "r1" doesn't conform to snake_case naming style (col 2)
+  Line: 99
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 17)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 53)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 22)
+  Line: 101
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'r2' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Radiobutton' may be undefined, or defined from star imports: tkinter (col 13)
+    pep8: E501 / line too long (116 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 63)
+    pylint: invalid-name / Attribute name "r2" doesn't conform to snake_case naming style (col 2)
+  Line: 102
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 17)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 52)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 22)
+  Line: 104
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'user_name_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 26)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 50)
+  Line: 105
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 30)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 65)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 35)
+  Line: 107
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'add_user' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Button' may be undefined, or defined from star imports: tkinter (col 19)
+    pep8: E501 / line too long (86 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 43)
+  Line: 108
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 23)
+    pyflakes: F999 / 'CENTER' may be undefined, or defined from star imports: tkinter (col 59)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 28)
+  Line: 109
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W391 / blank line at end of file (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+
+frontend/Login_page.py
+  Line: 1
+    pylint: invalid-name / Module name "Login_page" doesn't conform to snake_case naming style
+  Line: 2
+    pylint: unused-wildcard-import / Unused imports from wildcard import: enum, sys, TclError, re, wantobjects, TkVersion, TclVersion, READABLE, WRITABLE, EXCEPTION, EventType, Event, NoDefaultRoot, Variable, StringVar, IntVar, DoubleVar, BooleanVar, mainloop, getint, getdouble, getboolean, Misc, CallWrapper, XView, YView, Wm, Tk, Tcl, Pack, Place, Grid, BaseWidget, Widget, Toplevel, Canvas, Checkbutton, Listbox, Menu, Menubutton, Message, Radiobutton, Scale, Scrollbar, Text, OptionMenu, Image, PhotoImage, BitmapImage, image_names, image_types, Spinbox, LabelFrame, PanedWindow, NO, FALSE, OFF, YES, TRUE, ON, N, S, W, E, NW, SW, NE, SE, NS, EW, NSEW, CENTER, NONE, X, Y, BOTH, TOP, RIGHT, BOTTOM, RAISED, SUNKEN, FLAT, RIDGE, GROOVE, SOLID, HORIZONTAL, VERTICAL, NUMERIC, CHAR, WORD, BASELINE, INSIDE, OUTSIDE, SEL, SEL_FIRST, SEL_LAST, END, INSERT, CURRENT, ANCHOR, ALL, NORMAL, DISABLED, ACTIVE, HIDDEN, CASCADE, CHECKBUTTON, COMMAND, RADIOBUTTON, SEPARATOR, SINGLE, BROWSE, MULTIPLE, EXTENDED, DOTBOX, UNDERLINE, PIESLICE, CHORD, ARC, FIRST, LAST, BUTT, PROJECTING, ROUND, BEVEL, MITER, MOVETO, SCROLL, UNITS, PAGES
+    pylint: wildcard-import / Wildcard import tkinter
+  Line: 3
+    pylint: unused-import / Unused ttk imported from tkinter
+  Line: 4
+    pylint: unused-import / Unused tkinter imported as tk
+  Line: 6
+    pylint: import-error / Unable to import 'requests'
+  Line: 7
+    pylint: wrong-import-order / standard import "import json" should be placed before "import requests"
+  Line: 10
+    pylint: too-many-instance-attributes / Too many instance attributes (10/7)
+    pylint: useless-object-inheritance / Class 'Login_page' inherits from object, can be safely removed from bases in python3
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 12
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 13
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 15
+    pep8: N802 / function name should be lowercase (col 6)
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: invalid-name / Method name "setRoot" doesn't conform to snake_case naming style (col 1)
+  Line: 16
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'root' defined outside __init__ (col 2)
+  Line: 17
+    pep8: W191 / indentation contains tabs (col 1)
+    pyflakes: F999 / 'Frame' may be undefined, or defined from star imports: tkinter (col 16)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 18
+    pep8: W191 / indentation contains tabs (col 1)
+    pyflakes: F999 / 'LEFT' may be undefined, or defined from star imports: tkinter (col 26)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 23)
+  Line: 19
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 20
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 22
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 23
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 24
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pylint: attribute-defined-outside-init / Attribute 'username_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 25)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 48)
+  Line: 25
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 31)
+  Line: 26
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pylint: attribute-defined-outside-init / Attribute 'username_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 25)
+    pylint: bad-whitespace / No space allowed after bracket
+		self.username_entry = Entry( self.frame)
+                             ^ (col 29)
+  Line: 27
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 31)
+  Line: 28
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pylint: attribute-defined-outside-init / Attribute 'password_label' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Label' may be undefined, or defined from star imports: tkinter (col 25)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 48)
+  Line: 29
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 31)
+  Line: 30
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 31)
+    pylint: attribute-defined-outside-init / Attribute 'password_entry' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Entry' may be undefined, or defined from star imports: tkinter (col 25)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 48)
+  Line: 31
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 31)
+  Line: 32
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 30)
+    pep8: E202 / whitespace before ')' (col 94)
+    pylint: attribute-defined-outside-init / Attribute 'login_button' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Button' may be undefined, or defined from star imports: tkinter (col 23)
+    pep8: E501 / line too long (95 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 47)
+  Line: 33
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 36)
+  Line: 34
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 29)
+  Line: 35
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '(' (col 32)
+    pylint: attribute-defined-outside-init / Attribute 'newuser_button' defined outside __init__ (col 2)
+    pyflakes: F999 / 'Button' may be undefined, or defined from star imports: tkinter (col 25)
+    pep8: E501 / line too long (101 > 79 characters) (col 80)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 49)
+  Line: 36
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 38)
+  Line: 37
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 31)
+  Line: 39
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 40
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'user_id' defined outside __init__ (col 2)
+  Line: 41
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: attribute-defined-outside-init / Attribute 'pwd' defined outside __init__ (col 2)
+  Line: 42
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 43
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 45
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 46
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (118 > 79 characters) (col 80)
+    pylint: invalid-name / Variable name "r" doesn't conform to snake_case naming style (col 3)
+  Line: 47
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E211 / whitespace before '(' (col 9)
+    pylint: bad-whitespace / No space allowed before bracket
+			print (r.status_code)
+         ^ (col 9)
+  Line: 48
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 49
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 50
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 51
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 52
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 53
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 54
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 55
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: bare-except / No exception type(s) specified (col 2)
+  Line: 56
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 59
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E303 / too many blank lines (2) (col 2)
+  Line: 60
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 61
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 62
+    pep8: W391 / blank line at end of file (col 1)
+    pylint: trailing-newlines / Trailing newlines
+
+frontend/Main_app.py
+  Line: 1
+    pylint: invalid-name / Module name "Main_app" doesn't conform to snake_case naming style
+  Line: 2
+    pylint: unused-wildcard-import / Unused imports from wildcard import: enum, sys, TclError, re, wantobjects, TkVersion, TclVersion, READABLE, WRITABLE, EXCEPTION, EventType, Event, NoDefaultRoot, Variable, StringVar, IntVar, DoubleVar, BooleanVar, mainloop, getint, getdouble, getboolean, Misc, CallWrapper, XView, YView, Wm, Tk, Tcl, Pack, Place, Grid, BaseWidget, Widget, Toplevel, Button, Canvas, Checkbutton, Entry, Frame, Label, Listbox, Menu, Menubutton, Message, Radiobutton, Scale, Scrollbar, Text, OptionMenu, Image, PhotoImage, BitmapImage, image_names, image_types, Spinbox, LabelFrame, PanedWindow, NO, FALSE, OFF, YES, TRUE, ON, N, S, W, E, NW, SW, NE, SE, NS, EW, NSEW, CENTER, NONE, X, Y, BOTH, LEFT, TOP, RIGHT, BOTTOM, RAISED, SUNKEN, FLAT, RIDGE, GROOVE, SOLID, HORIZONTAL, VERTICAL, NUMERIC, CHAR, WORD, BASELINE, INSIDE, OUTSIDE, SEL, SEL_FIRST, SEL_LAST, END, INSERT, CURRENT, ANCHOR, ALL, NORMAL, DISABLED, ACTIVE, HIDDEN, CASCADE, CHECKBUTTON, COMMAND, RADIOBUTTON, SEPARATOR, SINGLE, BROWSE, MULTIPLE, EXTENDED, DOTBOX, UNDERLINE, PIESLICE, CHORD, ARC, FIRST, LAST, BUTT, PROJECTING, ROUND, BEVEL, MITER, MOVETO, SCROLL, UNITS, PAGES
+    pylint: wildcard-import / Wildcard import tkinter
+  Line: 3
+    pyflakes: F401 / 'tkinter.Canvas' imported but unused (col 1)
+  Line: 5
+    pylint: unused-import / Unused messagebox imported from tkinter
+  Line: 6
+    pylint: import-error / Unable to import 'requests'
+    pylint: unused-import / Unused import requests
+  Line: 7
+    pylint: unused-wildcard-import / Unused imports from wildcard import: json
+    pylint: wildcard-import / Wildcard import Login_page
+  Line: 8
+    pylint: unused-wildcard-import / Unused imports from wildcard import: ScrolledText
+    pylint: wildcard-import / Wildcard import Home_page
+  Line: 9
+    pylint: wildcard-import / Wildcard import Createuser_page
+  Line: 16
+    pylint: invalid-name / Attribute name "nb" doesn't conform to snake_case naming style (col 8)
+  Line: 19
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 21
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 23
+    pep8: E303 / too many blank lines (2) (col 5)
+  Line: 25
+    pyflakes: F999 / 'Login_page' may be undefined, or defined from star imports: Createuser_page, Home_page, Login_page, tkinter (col 27)
+  Line: 30
+    pylint: attribute-defined-outside-init / Attribute 'createuser_page' defined outside __init__ (col 8)
+    pyflakes: F999 / 'Createuser_page' may be undefined, or defined from star imports: Createuser_page, Home_page, Login_page, tkinter (col 32)
+  Line: 35
+    pylint: attribute-defined-outside-init / Attribute 'home_page' defined outside __init__ (col 8)
+    pyflakes: F999 / 'Home_page' may be undefined, or defined from star imports: Createuser_page, Home_page, Login_page, tkinter (col 26)
+  Line: 37
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 39
+    pylint: invalid-name / Constant name "app" doesn't conform to UPPER_CASE naming style
+  Line: 42
+    pep8: W292 / no newline at end of file (col 15)
+
+
+
+Check Information
+=================
+         Started: 2018-11-22 13:28:19.971703
+        Finished: 2018-11-22 13:28:26.233192
+      Time Taken: 6.26 seconds
+       Formatter: grouped
+        Profiles: default, strictness_veryhigh, no_doc_warnings, no_test_warnings, no_member_warnings
+      Strictness: veryhigh
+  Libraries Used: 
+       Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
+  Messages Found: 713
+
