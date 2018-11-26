@@ -1,3 +1,6 @@
 src/backend/__pychache__
 tests/__pychache__
 .vscode
+src/backend/config.py
+src/backend/token.json
+src/backend/credentials.json
