@@ -12,3 +12,7 @@ cd ../tests
 filename2="$TRAVIS_BUILD_DIR/report/post_commit/$today-pytest.log"
 touch $filename2
 pytest *.py > $filename2
+
+filename2="$TRAVIS_BUILD_DIR/report/coverage/$today-coverage.log"
+touch $filename2
+coverage report -m > $filename2

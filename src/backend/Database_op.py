@@ -173,3 +173,10 @@ def remove_meeting(table, meetingID ):
     result = run_q(sql, None, True)
     return "Deleted Meeting"
 
+def remove_account(table,template):
+    
+    sql = "delete from " + table + " where username = "+"'"+template["username"]+"'"
+    print(sql)
+    result = run_q(sql, None, True)
+    return "Deleted Account"
+
