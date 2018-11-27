@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.append("../")
 from backend.login import login_email, login_username, create_user
 from backend.Models import db, User
 # import main
