@@ -2,17 +2,17 @@
 
 #style checker, bug finder
 cd src
-today=`date '+%Y_%m_%d__%H_%M_%S'`
-filename1="$TRAVIS_BUILD_DIR/report/post_commit/$today-bug.log"
+#today=`date '+%Y_%m_%d__%H_%M_%S'`
+filename1="$TRAVIS_BUILD_DIR/report/post_commit/bug.log"
 touch $filename1
 prospector --strictness veryhigh > $filename1
 
 #pytest
 cd ../tests
-filename2="$TRAVIS_BUILD_DIR/report/post_commit/$today-pytest.log"
+filename2="$TRAVIS_BUILD_DIR/report/post_commit/pytest.log"
 touch $filename2
 pytest *.py > $filename2
 
-filename2="$TRAVIS_BUILD_DIR/report/coverage/$today-coverage.log"
-touch $filename2
-coverage report -m > $filename2
+# filename2="$TRAVIS_BUILD_DIR/report/coverage/$today-coverage.log"
+# touch $filename2
+# coverage report -m > $filename2
