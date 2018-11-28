@@ -17,3 +17,6 @@ cd ../tests
 filename2="../report/pre_commit/$today-pytest.log"
 touch $filename2
 pytest *.py > $filename2
+
+
+

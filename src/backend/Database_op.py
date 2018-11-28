@@ -106,16 +106,17 @@ def update_group_info(table, data_template):
     result = run_q(sql, None, True)
     return "Updated Group"
 
-def remove_group(table, template ):
+def remove_group(table, groupID ):
     
-    sql = "delete from " + table + " where groupID = "+"'"+str(template["groupID"])+"'"
+    sql = "delete from " + table + "where groupID = "+"'"+groupID+"'"
     print(sql)
     result = run_q(sql, None, True)
     return "Deleted Group"
 
+
 def find_groups(table, row):
     #print (pk)
-    q = "select groupName,groupType,groupID from usergroups where username = '" + row["username"] + "'"
+    q = "select groupName,groupType from usergroups where username = '" + row["username"] + "'"
     print (q)
     result = run_q(q, None, True)
     return result
@@ -171,11 +172,4 @@ def remove_meeting(table, meetingID ):
     print(sql)
     result = run_q(sql, None, True)
     return "Deleted Meeting"
-
-def remove_account(table,template):
-    
-    sql = "delete from " + table + " where username = "+"'"+template["username"]+"'"
-    print(sql)
-    result = run_q(sql, None, True)
-    return "Deleted Account"
 
