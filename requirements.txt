@@ -3,4 +3,4 @@ pytest
 flask
 flask_sqlalchemy
 flask_login
-prospector -A
+prospector
