@@ -2,8 +2,8 @@ language: python
 python:
 - '3.6'
 install:
-- pip uninstall requirements.txt
-- python setup.py uninstall
+- pip install -r requirements.txt
+- python setup.py install
 before_script:
 - export FLASK_APP="$TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py"
 - export FLASK_DEBUG=1
