@@ -91,24 +91,23 @@ def insert_group(table, rows):
         query = "INSERT INTO " + table + " (" + col_name + ") VALUES (" + val_name + ")"
         result = run_q(query, None, True)
         res = "Group Creation Successful"
-
+    print("result done")
     return res
 
 def update_group_info(table, data_template):
     
     set_values = ""
     for column,value in data_template.items():
-        set_values += ""+column+"="+"'"+value+"'" + ", "
+        set_values += ""+column+"="+"'"+str(value)+"'" + ", "
     set_values = set_values[:-2]
     update_string = "SET "+set_values
-    sql = "update " + table + "  " + update_string + " " + "where groupID = "+"'"+data_template["groupID"]+"'"
-    print(sql)
+    sql = "update " + table + "  " + update_string + " " + "where groupID = "+"'"+str(data_template["groupID"])+"'"
     result = run_q(sql, None, True)
     return "Updated Group"
 
-def remove_group(table, groupID ):
+def remove_group(table, group ):
     
-    sql = "delete from " + table + "where groupID = "+"'"+groupID+"'"
+    sql = "delete from " + table + " where groupID = "+"'"+str(group['groupID'])+"'"
     print(sql)
     result = run_q(sql, None, True)
     return "Deleted Group"
@@ -116,21 +115,21 @@ def remove_group(table, groupID ):
 
 def find_groups(table, row):
     #print (pk)
-    q = "select groupName,groupType from usergroups where username = '" + row["username"] + "'"
+    q = "select groupName,groupType,groupID from usergroups where username = '" + row["username"] + "'"
     print (q)
     result = run_q(q, None, True)
     return result
 
 def print_indmeeting(table, row):
     #print (pk)
-    q = "select meeting.meetingID, meeting.username, meeting.meetingLoc from meeting inner join groups on groups.meetingID = meeting.meetingID where username = '" + row["username"] + "' and groupName = '" + row["groupName"] + "'"
+    q = "select meeting.meetingID, meeting.username, meeting.meetingLoc from meeting inner join usergroups on meeting.meetingID = meeting.meetingID where meeting.username = '" + row["username"] + "' and usergroups.groupName = '" + row["groupName"] + "'"
     print (q)
     result = run_q(q, None, True)
     return result
 
 def print_indgroups(table, row):
     #print (pk)
-    q = "select groups.username, user_credentials.nameFirst, user_credentials.nameLast from groups inner join user_credentials on groups.username = user_credentials.username where groupName = '" + row["groupName"] + "'"
+    q = "select usergroups.username, user_credentials.nameFirst, user_credentials.nameLast from usergroups inner join user_credentials on usergroups.username = user_credentials.username where groupName = '" + row["groupName"] + "'"
     print (q)
     result = run_q(q, None, True)
     return result
@@ -158,18 +157,34 @@ def update_meeting_info(table, data_template):
     
     set_values = ""
     for column,value in data_template.items():
-        set_values += ""+column+"="+"'"+value+"'" + ", "
+        set_values += ""+column+"="+"'"+str(value)+"'" + ", "
     set_values = set_values[:-2]
     update_string = "SET "+set_values
-    sql = "update " + table + "  " + update_string + " " + "where meetingID = "+"'"+data_template["meetingID"]+"'"
+    sql = "update " + table + "  " + update_string + " " + "where meetingID = "+"'"+str(data_template["meetingID"])+"'"
     print(sql)
     result = run_q(sql, None, True)
     return "Updated Meeting"
 
 def remove_meeting(table, meetingID ):
     
-    sql = "delete from " + table + " where meetingID = "+"'"+meetingID+"'"
+    sql = "delete from " + table + " where meetingID = "+"'"+str(meetingID)+"'"
     print(sql)
     result = run_q(sql, None, True)
     return "Deleted Meeting"
+
+def remove_account(table,template):
+    sql = "delete from " + table + " where username= "+"'"+template['username']+"'"
+    result = run_q(sql, None, True)
+    return "Deleted Account"
+
+def get_meeting(table,meetingID):
+    sql = "select * from "+table+" where meetingID = "+"'"+meetingID+"'"
+    result = run_q(sql, None, True)
+    return result
+
+def get_meeting_list(username):
+    sql = "select * from meeting join usergroups on meeting.groupID = usergroups.groupID where usergroups.username = "+"'"+username+"'"
+    result = run_q(sql, None, True)
+    return result
+
 

@@ -6,6 +6,8 @@ from flask import request
 import copy
 import Database_op
 import requests
+import urllib.request
+
 # The main program that executes. This call creates an instance of a
 # class and the constructor starts the runtime.
 app = Flask(__name__)
@@ -153,11 +155,29 @@ def update_meeting():
     res= Database_op.update_meeting_info("meeting",body)
     return "Group Updation successful"
 
+@app.route('/get_meetings/<username>', methods = ['POST']) 
+def get_meeting(username):
+    in_args, fields, body = parse_and_print_args()
+    res= Database_op.get_meeting_list(username)
+    return res
+
 @app.route('/remove_meeting/<meetingID>', methods = ['POST']) 
 def remove_meeting(meetingID):
     in_args, fields, body = parse_and_print_args()
     res= Database_op.remove_meeting("meeting",meetingID)
     return res
+
+@app.route('/handle_mapdata',methods = ['POST'])
+def mapdata():
+    in_args, fields, body = parse_and_print_args()
+    print("latitude",request.form['latitude'])
+    print("longitutde",request.form['longitude'])
+    #result = {'latitude':request.form['latitude'],'longitutde':request.form['longitude']}
+    url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+request.form['latitude']+','+request.form['longitude']+"&sensor=true_or_false&key=AIzaSyCyADWR91wYDIC3PiVhO3t6l_EQRslBl_s"
+    result = urllib.request.urlopen(url).read()
+    #print("result:",result)
+    #return result
+    return result, 200, {"content-type": "application/json; charset: utf-8"}
 
 if __name__ == '__main__':
     app.run()
