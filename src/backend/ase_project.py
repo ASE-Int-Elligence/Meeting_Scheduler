@@ -3,14 +3,20 @@ import json
 # Include Flask packages
 from flask import Flask
 from flask import request
+from flask import render_template
 import copy
 import Database_op
 import requests
 import urllib.request
-
+import ast
+import math
+import geopy
+from geopy import distance
 # The main program that executes. This call creates an instance of a
 # class and the constructor starts the runtime.
 app = Flask(__name__)
+
+mapaddress = ''
 
 def parse_and_print_args():
     fields = None
@@ -175,9 +181,70 @@ def mapdata():
     #result = {'latitude':request.form['latitude'],'longitutde':request.form['longitude']}
     url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+request.form['latitude']+','+request.form['longitude']+"&sensor=true_or_false&key=AIzaSyCyADWR91wYDIC3PiVhO3t6l_EQRslBl_s"
     result = urllib.request.urlopen(url).read()
+    result =  result.decode("utf-8")
+    result = ast.literal_eval(result)
+    global mapaddress
+    mapaddress = str(result["results"][0]["formatted_address"])
+    print("mapaddress = ",mapaddress)
     #print("result:",result)
     #return result
-    return result, 200, {"content-type": "application/json; charset: utf-8"}
+    #return mapaddress, 200, {"content-type": "application/json; charset: utf-8"}
+    return json.dumps(result,indent=2), 200, {"content-type": "application/json; charset: utf-8"}
+
+@app.route('/get_address',methods = ['POST'])
+def get_address():
+    global mapaddress
+    return mapaddress, 200, {"content-type": "text/plain; charset: utf-8"}
+
+
+@app.route('/delete_users_in_group',methods = ['POST'])
+def delete_users_from_group():
+    in_args, fields, body = parse_and_print_args()
+    res = Database_op.delete_user_from_group('usergroups',body)
+    return result
+
+@app.route('/current_location',methods = ['POST'])
+def current_location():
+    in_args, fields, body = parse_and_print_args()
+    print("current_location : ",body)
+    return "success"
+    #return json.dumps(body,indent=2), 200, {"content-type": "application/json; charset: utf-8"}
+
+@app.route('/render_location',methods = ['GET','POST'])
+def render_location():
+    print("in render")
+    return render_template("loc.html")
+
+@app.route('/checkin',methods = ['GET','POST'])
+def checkin():
+    in_args, fields, body = parse_and_print_args()
+    # R = 6373.0
+    # lat1 = float(body['lat1'])
+    # long1 = float(body['long1'])
+    # lat2 = float(body['lat2'])
+    # long2 = float(body['long2'])
+
+    # dlon = float(long2) - float(long1)
+    # dlat = float(lat2) - float(lat1)
+
+    # a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
+    # c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    # distance = R * c
+    # coords_1 = (52.2296756, 21.0122287)
+    # coords_2 = (52.406374, 16.9251681)
+
+    coords_1 = (float(body['lat1']),float(body['long1']))
+    coords_2 = (float(body['lat2']),float(body['long2']))
+
+    distance = geopy.distance.vincenty(coords_1, coords_2).km
+
+    if distance <=2:
+        status = True
+    else:
+        status = False
+    print("distance:",distance)
+    return json.dumps({'status':status},indent=2), 200, {"content-type": "application/json; charset: utf-8"}
 
 if __name__ == '__main__':
     app.run()

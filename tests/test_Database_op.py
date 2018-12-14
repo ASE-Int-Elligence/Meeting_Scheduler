@@ -81,7 +81,7 @@ class Unit_testing(unittest.TestCase):
     def test_add_meeting(self):
         template = {}
         template['username']='testuser'
-        #template['groupID']='100'
+        template['groupID']='1'
         template['meetingname']='testmeetingname'
         template['meetingLoc']='testmeetingloc'
 
@@ -96,8 +96,9 @@ class Unit_testing(unittest.TestCase):
 
     def test_update_meeting(self):
         template = {}
-        meeting = db_op.get_meeting('meeting','1')
+        meeting = db_op.show_meeting('meeting',{'username':'testuser'})
         #meeting = db_op.print_indmeeting('meeting',{'username':"testuser",'groupName':"testgroupname"})
+        print("meeting = ",meeting)
         no_meeting = True
         if(len(meeting)>0):
             no_meeting = False
@@ -123,7 +124,7 @@ class Unit_testing(unittest.TestCase):
 
     def test_print_indgroups(self):
         template = {}
-        group = db_op.print_indgroups('meeting',{'username':"testuser",'groupName':"testgroupname"})
+        group = db_op.print_indgroups('meeting',{'username':"testuser",'groupName':"testgroupname",'groupID':'1'})
         no_group = True
         if(len(group)>0):
             no_group = False
