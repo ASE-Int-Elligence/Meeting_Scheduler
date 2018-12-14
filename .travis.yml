@@ -7,7 +7,7 @@ install:
 before_script:
 - export FLASK_APP="$TRAVIS_BUILD_DIR/src/backend/meeting_scheduler_flask.py"
 - export FLASK_DEBUG=1
-- #python $TRAVIS_BUILD_DIR/src/backend/Models.py
+- python $TRAVIS_BUILD_DIR/src/backend/Models.py
 script:
 - bash scripts/post_commit.sh
 env:
