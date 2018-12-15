@@ -17,6 +17,8 @@ from geopy import distance
 app = Flask(__name__)
 
 mapaddress = ''
+meeting_venue_lat = 0
+meeting_venue_lng =0
 
 def parse_and_print_args():
     fields = None
@@ -207,13 +209,32 @@ def delete_users_from_group():
 def current_location():
     in_args, fields, body = parse_and_print_args()
     print("current_location : ",body)
-    return "success"
+    global meeting_venue_lat
+    global meeting_venue_lng
+    coords_1 = (float(body['lat']),float(body['lng']))
+    coords_2 = (float(meeting_venue_lat),float(meeting_venue_lng))
+
+    distance = geopy.distance.vincenty(coords_1, coords_2).km
+
+    if distance <=2:
+        status = True
+    else:
+        status = False
+    print("distance:",distance)
+    return json.dumps({'status':status},indent=2), 200, {"content-type": "application/json; charset: utf-8"}
+
     #return json.dumps(body,indent=2), 200, {"content-type": "application/json; charset: utf-8"}
 
 @app.route('/render_location',methods = ['GET','POST'])
 def render_location():
+    in_args, fields, body = parse_and_print_args()
+    #res = Database_op.get_single_meeting('meeting',body)
     print("in render")
-    return render_template("loc.html")
+    global meeting_venue_lat
+    meeting_venue_lat = 52.2296756
+    global meeting_venue_lng
+    meeting_venue_lng = 21.0122287
+    return render_template("loc.html",var ="parameter")
 
 @app.route('/checkin',methods = ['GET','POST'])
 def checkin():
@@ -231,11 +252,11 @@ def checkin():
     # c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
     # distance = R * c
-    # coords_1 = (52.2296756, 21.0122287)
-    # coords_2 = (52.406374, 16.9251681)
+    coords_1 = (52.2296756, 21.0122287)
+    coords_2 = (52.406374, 16.9251681)
 
-    coords_1 = (float(body['lat1']),float(body['long1']))
-    coords_2 = (float(body['lat2']),float(body['long2']))
+    # coords_1 = (float(body['lat1']),float(body['long1']))
+    # coords_2 = (float(body['lat2']),float(body['long2']))
 
     distance = geopy.distance.vincenty(coords_1, coords_2).km
 

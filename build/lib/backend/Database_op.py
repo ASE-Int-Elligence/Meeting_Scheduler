@@ -181,6 +181,12 @@ def show_meeting(table, row):
     result = run_q(q, None, True)
     return result
 
+def get_single_meeting(table,row):
+    q = "select * from meeting where meetingID = '" + row["meetingID"] + "'"
+    print ("get single meeting=",q)
+    result = run_q(q, None, True)
+    return result
+
 def remove_meeting(table, meetingID ):
 
     sql = "delete from " + table + " where meetingID = "+"'"+str(meetingID)+"'"
