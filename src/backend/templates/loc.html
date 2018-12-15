@@ -45,6 +45,8 @@
             global_pos = pos
             sendLocation();
             //console.log(global_pos)
+            var s = "'"+{{var}}+"'"
+            //window.alert(s)
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);

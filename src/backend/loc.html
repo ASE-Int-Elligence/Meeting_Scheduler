@@ -44,6 +44,7 @@
             };
             global_pos = pos
             sendLocation();
+            //window.alert({{var}})
             //console.log(global_pos)
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
@@ -94,6 +95,9 @@
               processData: false,
               type: 'POST',
               url: 'http://127.0.0.1:5000/current_location'
+          });
+          $.get("demo_test.asp", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
           });
 
           // $.post( "/current_location", {
