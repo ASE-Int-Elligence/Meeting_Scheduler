@@ -6,12 +6,10 @@ src/Meeting_Scheduler.egg-info/SOURCES.txt
 src/Meeting_Scheduler.egg-info/dependency_links.txt
 src/Meeting_Scheduler.egg-info/top_level.txt
 src/backend/Database_op.py
-src/backend/Database_op_copy.py
 src/backend/Google_API.py
 src/backend/Models.py
 src/backend/__init__.py
 src/backend/ase_project.py
-src/backend/ase_project_backup.py
 src/backend/login.py
 src/backend/meeting_scheduler_flask.py
 src/frontend/Createuser_page.py
