@@ -1,0 +1,19 @@
+
+
+1. 
+
+https://github.com/ASE-Int-Elligence/Meeting_Scheduler (Links to an external site.)Links to an external site.
+
+2.
+
+scripts/pre_commit.sh
+
+scripts/post_commit.sh, .travis.yml
+
+3. 
+
+report/pre_commit
+
+report/post_commit
+
+ 
