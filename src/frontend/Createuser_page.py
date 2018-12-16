@@ -5,19 +5,21 @@ import tkinter as tk
 from tkinter import messagebox
 import requests
 import json
+import re
 
 
 class Createuser_page(object):
 
 	def __init__(self):
 		self.frame = None
+		self.pass_regex = "^(?=.*\d).{4,15}$"
+		self.email_regex = '^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
 
 	def setRoot(self, kinter):
 		self.root = kinter
 		self.frame = Frame(self.root, width = 600, height = 600)
 		self.frame.pack(side = LEFT)
 		self.frame.columnconfigure(0, {'minsize': 150})
- 		# self.frame.rowconfigure(3, {'minsize': 30})
 
 	def get_page(self, kinter):
 		self.setRoot(kinter)
@@ -58,16 +60,30 @@ class Createuser_page(object):
 		self.nu_back_button = Button( self.frame, text = "Go Back", command = self.go_back )
 		self.nu_back_button.place( relx = 0.55, rely = 0.55, anchor = CENTER)
 
+	# def check_pass_regex(self):
+
+
 	def create_user_pressed(self):
 
 		self.new_user_id = self.nu_username_entry.get()
 		self.new_user_pwd = self.nu_password_entry.get()
 		firstName = self.nu_firstname_entry.get()
 		lastName = self.nu_lastname_entry.get()
-		email = self.nu_email_entry.get()
+		self.email = self.nu_email_entry.get()
 
 		if self.new_user_id == "" or self.new_user_pwd == "" or self.nu_firstname_entry.get() == "" or self.nu_lastname_entry.get() == "":
 			messagebox.showinfo("Error", "Fields cannot be empty")
+			return
+		rmatch = re.compile(self.pass_regex)
+		ematch = re.compile(self.email_regex)
+
+
+		if rmatch.match(self.new_user_pwd) == None:
+			messagebox.showinfo("Error", "Passwords must include at least one numeric digit, Length 4-15")
+			return
+
+		if ematch.match(self.email) == None:
+			messagebox.showinfo("Error", "Invalid Email ID")
 			return
 
 		if self.nu_password_confirm_entry.get() == self.new_user_pwd:
@@ -77,14 +93,19 @@ class Createuser_page(object):
 			return
 
 		try:
-			r = requests.post("http://127.0.0.1:5000/signup", data=json.dumps({'username': self.new_user_id, 'password': self.new_user_pwd, 'nameFirst': firstName, 'nameLast': lastName, 'email': email}))
-
+			print("0ne")
+			r = requests.post("http://127.0.0.1:5000/signup", data=json.dumps({'username': self.new_user_id,
+			'password': self.new_user_pwd, 'nameFirst': firstName, 'nameLast': lastName, 'email': self.email}))
+			print("two")
 			if r.status_code == 200:
-				messagebox.showinfo("Success", "User creation success !")
+				print("three")
+				self.go_back()
+				# messagebox.showinfo("Success", "User creation success !")
 			else:
+				print("four")
 				messagebox.showinfo("Error", "User creation failed !")
 		except:
-			messagebox.showinfo("Error", "Fields cannot be empty")
+			messagebox.showinfo("Error", "Unabble to connect to internet")
 
 	def go_back(self):
 		self.frame.destroy()
