@@ -8,7 +8,6 @@ from Login_page import *
 from Home_page import *
 from Createuser_page import *
 
-
 class SampleApp(tk.Tk):
 
     def __init__(self):
@@ -16,9 +15,9 @@ class SampleApp(tk.Tk):
         self.nb = ttk.Notebook(self)
         # self.nb.pack
         self.load_login_page()
-        
+
         self.userid = ""
-                
+
 
     def load_login_page(self):
 
@@ -34,7 +33,7 @@ class SampleApp(tk.Tk):
 
         self.home_page = Home_page()
         self.home_page.get_page(self)
-        
+
 
 app = SampleApp()
 app.geometry("600x600")
