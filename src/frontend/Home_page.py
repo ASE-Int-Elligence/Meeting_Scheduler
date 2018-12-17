@@ -165,6 +165,11 @@ class Home_page(object):
 		# for ind in self.ind_group_info.keys():
 		# 	old_users.append(self.ind_group_info[ind]['username'])
 		# print(old_users+self.newusers)
+
+		for i in self.delusers:
+			if i == self.root.userid:
+				messagebox.showinfo("Error", "Cannot remove admin from the group")
+				return
 		try:
 			r = requests.post("http://127.0.0.1:5000/add_more_users", data=json.dumps( { 'groupID' : self.groups_info[key]['groupID'], 'users': old_users+self.newusers,
 				'admin': self.root.userid, "groupName": self.groups_info[key]["groupName"], "groupType": self.groups_info[key]["groupType"]}))

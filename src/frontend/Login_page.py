@@ -32,8 +32,8 @@ class Login_page(object):
 
 		self.login_button = Button( self.frame, text = "Login", command = self.login_button_pressed )
 		self.login_button.place( relx = 0.35, rely = 0.5, anchor = CENTER, width = 100)
-		self.forgot_button = Button( self.frame, text = "Forgot Password" )
-		self.forgot_button.place( relx = 0.55, rely = 0.5, anchor = CENTER)
+		# self.forgot_button = Button( self.frame, text = "Forgot Password" )
+		# self.forgot_button.place( relx = 0.55, rely = 0.5, anchor = CENTER)
 
 		self.newuser_button = Button( self.frame, text = "New User", command = self.newuser_button_pressed)
 		self.newuser_button.place( relx = 0.45, rely = 0.55, anchor = CENTER)
