@@ -3,11 +3,14 @@ from tkinter import *
 from tkinter import ttk, Canvas
 import tkinter as tk
 from tkinter import messagebox
+import tkinter
 import requests
 import json
 from tkinter.scrolledtext import ScrolledText
 import webbrowser
 # from CalendarDialog import *
+import re
+import datetime
 
 class Create_meeting(object):
 
@@ -21,22 +24,25 @@ class Create_meeting(object):
 	start_time = None
 	end_time = None
 	meetingName = None
+	date_regex = "^(?:(?:31(/|-|.)(?:0?[13578]|1[02]))1|(?:(?:29|30)(/|-|.)(?:0?[1,3-9]|1[0-2])2))(?:(?:1[6-9]|[2-9]d)?d{2})$|^(?:29(/|-|.)0?23(?:(?:(?:1[6-9]|[2-9]d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1d|2[0-8])(/|-|.)(?:(?:0?[1-9])|(?:1[0-2]))4(?:(?:1[6-9]|[2-9]d)?d{2})$"
+	date_regex = "^([1-9] |1[0-9]| 2[0-9]|3[0-1])(.|-)([1-9] |1[0-2])(.|-|)20[0-9][0-9]$"
 
-	# @staticmethod
-	# def selectDate( parent ):
-	# 	cd = CalendarDialog(parent)
-	# 	result = cd.result
-	# 	selected_date = Tkinter.StringVar()
-	# 	selected_date.set(result.strftime("%m/%d/%Y"))
-	# 	return selected_date.get()
+	@staticmethod
+	def selectDate( parent ):
+		cd = CalendarDialog(parent)
+		# result = cd.result
+		# selected_date = tkinter.StringVar()
+		# selected_date.set(result.strftime("%m/%d/%Y"))
+		# return selected_date.get()
 
 
-	# @staticmethod
-	#
-	# def setDate( parent ):
-	# 	date = Create_meeting.selectDate( parent )
-	# 	Create_meeting.date_label_entry.config(text = date)
-	# 	print(date)
+	@staticmethod
+	
+	def setDate( parent ):
+		pass
+		# date = Create_meeting.selectDate( parent )
+		# Create_meeting.date_label_entry.config(text = date)
+		# print(date)
 
 	@staticmethod
 	def selectLocaton( parent):
@@ -47,7 +53,7 @@ class Create_meeting(object):
 
 		Create_meeting.meet_dict = {'groupID' : Create_meeting.groupid , "meetingname":Create_meeting.meeting_label_entry.get() ,
 		"starttime": Create_meeting.hour_var.get()+":"+Create_meeting.min_var.get(), "endtime": Create_meeting.to_hour_var.get()+":"+Create_meeting.to_min_var.get(),
-		 "meetingdate" : Create_meeting.date_label_entry.cget("text"), "lat" : Create_meeting.addr['lat'],
+		 "meetingdate" : Create_meeting.date_label_entry.get(), "lat" : Create_meeting.addr['lat'],
 		 "lng" : Create_meeting.addr["lng"], "meetingLoc" : Create_meeting.addr["mapaddress"] }
 
 
@@ -72,19 +78,28 @@ class Create_meeting(object):
 
 	@staticmethod
 	def confirm_popup():
+
+		if Create_meeting.meeting_label_entry.get() == "":
+			messagebox.showinfo("Error", "Meeting Title cannot be empty")
+			return
+
+		try:
+			datetime.datetime.strptime(Create_meeting.date_label_entry.get(),"%d/%m/%Y")
+		except ValueError as err:
+			messagebox.showinfo("Error", "Invalid date entered")
+			return
+
 		try:
 			r = requests.post("http://127.0.0.1:5000/get_address")
-			print("dsvndfsjkbjhvb")
 			if r.status_code == 200:
-				print("jkbjhvb: ", r.content)
 				Create_meeting.addr = {}#json.loads(r.content)
 				Create_meeting.addr = json.loads(r.content)
-				print("----------------------------------------dsvndfsvb")
-
+				
 			else:
 				messagebox.showinfo("Error", "No Response about groups !")
 		except:
 			messagebox.showinfo("Error", "Not Connected to Internet !")
+
 		Create_meeting.confirm = Toplevel()
 		Create_meeting.confirm.title("Confirm Location")
 		Create_meeting.confirm.geometry("300x300")
@@ -125,14 +140,14 @@ class Create_meeting(object):
 		# group_label_entry = Label(top, text = groupname )
 		# group_label_entry.place(relx = 0.55, rely = 0.3, anchor = CENTER)
 
-		date_label = Label(Create_meeting.top, text = "Date : " )
-		date_label.place(relx = 0.25, rely = 0.4, anchor = CENTER)
+		date_label = Label(Create_meeting.top, text = "Date (dd/mm/yyyy) : " )
+		date_label.place(relx = 0.2, rely = 0.4, anchor = CENTER)
 
-		Create_meeting.date_label_entry = Label(Create_meeting.top, text = "TBD" )
-		Create_meeting.date_label_entry.place(relx = 0.55, rely = 0.4, anchor = CENTER)
+		Create_meeting.date_label_entry = Entry(Create_meeting.top )
+		Create_meeting.date_label_entry.place(relx = 0.6, rely = 0.4, anchor = CENTER)
 
-		date_button = Button(Create_meeting.top, text = "Select date" )#, command = lambda p = parent : Create_meeting.setDate(parent))
-		date_button.place(relx = 0.8, rely = 0.4, anchor = CENTER)
+		# date_button = Button(Create_meeting.top, text = "Select date", command = lambda p = parent : Create_meeting.setDate(parent.root))
+		# date_button.place(relx = 0.8, rely = 0.4, anchor = CENTER)
 
 		location_label = Label(Create_meeting.top, text = "Location : " )
 		location_label.place(relx = 0.25, rely = 0.5, anchor = CENTER)

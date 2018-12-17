@@ -23,16 +23,17 @@ class Meetings(object):
         text = self.todo_entry.get()
         self.text_fields.append(text)
         var = IntVar()
+        var.set(0)
         self.check_vars.append(var)
         check_button = Checkbutton(self.top, text = self.text_fields[-1], variable = self.check_vars[-1])
         check_button.place( relx = 0.2, rely = self.todo_num , anchor = W)
         self.check_buttons.append(check_button)
         self.todo_num += 0.1
         try:
-            print("kjhkjsdfhdsjkknfjkdjfk")
+            # print("kjhkjsdfhdsjkknfjkdjfk")
             r = requests.post("http://127.0.0.1:5000/create_todoitem", data = json.dumps({'meeting_id': self.meetings_info[key]["meetingID"],
             "checked" : var.get(), "iteminfo" : self.text_fields[-1] }))
-            print("jkhsfkjsdfhjk")
+            # print("jkhsfkjsdfhjk")
             if r.status_code == 200:
                 self.item_ids.append(r.content)
             else:

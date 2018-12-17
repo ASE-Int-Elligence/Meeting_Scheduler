@@ -29,10 +29,16 @@ class Create_group(object):
 			messagebox.showinfo("Error", "Select an user")
 
 	def create_popup(self):
+
+		partial_name = self.user_name_entry.get()
+
+		if partial_name == "":
+			messagebox.showinfo("Error", "Enter a partial name")
+			return
+
 		self.popup = tk.Toplevel(self.frame)
 		self.scrollbar = Scrollbar(self.popup)
 		self.scrollbar.pack( side = RIGHT, fill = Y )
-		partial_name = self.user_name_entry.get()
 		self.popup.title("Users")
 		potential_users = {0:"John Does", 1:"John Doesnt"}
 		try:
@@ -61,9 +67,21 @@ class Create_group(object):
 			self.group_type = "informal"
 
 	def final_create_group(self):
+
+		if self.group_name_entry.get() == "":
+			messagebox.showinfo("Error", "Group name cannot be empty")
+			return
+
+		self.users.append(self.root.userid)
+		self.user_set = set(self.users)
+
+		if len(self.user_set) < 2:
+			messagebox.showinfo("Error", "Add atleast one user")
+			return
+
 		try:
-			self.users.append(self.root.userid)
-			r = requests.post("http://127.0.0.1:5000/create_group", data=json.dumps( { 'users': list(self.users),
+			
+			r = requests.post("http://127.0.0.1:5000/create_group", data=json.dumps( { 'users': list(self.user_set),
 				'admin': self.root.userid, "groupName": self.group_name_entry.get(), "groupType": self.group_type}))
 			if r.status_code == 200:
 				pass
@@ -82,6 +100,7 @@ class Create_group(object):
 		# self.(self.frame)
 
 		self.var = IntVar()
+		self.var.set(1)
 
 		self.group_name_label = Label(self.frame, text = "Group Name :")
 		self.group_name_label.place( relx = 0.3, rely = 0.3, anchor = CENTER)

@@ -12,11 +12,22 @@ class SampleApp(tk.Tk):
 
     def __init__(self):
         tk.Tk.__init__(self)
+
+
+        
+
+        # self.canvas = Canvas( self, bg = '#FFFFFF', width=600, height=600, scrollregion=(0,0,1800,500))
+        # vbar=Scrollbar( self, orient = VERTICAL)
+        # vbar.pack(side=RIGHT,fill=Y)
+        # vbar.config( command=self.canvas.yview)
+        # self.canvas.config(width=600,height=600)
+        # self.canvas.config(yscrollcommand=vbar.set)
+        # self.canvas.pack(side=LEFT,expand=True,fill=BOTH)
+
+        self.userid = ""
         self.nb = ttk.Notebook(self)
         # self.nb.pack
         self.load_login_page()
-
-        self.userid = ""
 
 
     def load_login_page(self):
@@ -36,6 +47,6 @@ class SampleApp(tk.Tk):
 
 
 app = SampleApp()
-app.geometry("600x600")
+app.geometry("600x900")
 app.title("Meeting Scheduler")
 app.mainloop()
