@@ -75,6 +75,11 @@ class Home_page(object):
 	def del_popup_selection(self):
 		try:
 			self.listbox_selection = self.lb.get(self.lb.curselection())
+
+			if self.listbox_selection == self.root.userid:
+				messagebox.showinfo("Error", "Cannot delete admin from the group")
+				return
+
 			self.delusers.append(self.listbox_selection)
 			# print(self.newusers)
 			self.popup.destroy()
@@ -166,10 +171,6 @@ class Home_page(object):
 		# 	old_users.append(self.ind_group_info[ind]['username'])
 		# print(old_users+self.newusers)
 
-		for i in self.delusers:
-			if i == self.root.userid:
-				messagebox.showinfo("Error", "Cannot remove admin from the group")
-				return
 		try:
 			r = requests.post("http://127.0.0.1:5000/add_more_users", data=json.dumps( { 'groupID' : self.groups_info[key]['groupID'], 'users': old_users+self.newusers,
 				'admin': self.root.userid, "groupName": self.groups_info[key]["groupName"], "groupType": self.groups_info[key]["groupType"]}))
