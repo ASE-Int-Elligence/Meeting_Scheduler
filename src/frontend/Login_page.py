@@ -45,13 +45,13 @@ class Login_page(object):
 			messagebox.showinfo("Error", "Fields cannot be empty")
 
 		# self.frame.destroy()
+		# self.root.userid = self.user_id
 		# self.root.load_home_page()
-
+		
 		try:
 			r = requests.post("http://127.0.0.1:5000/login", data=json.dumps({'username': self.user_id, 'password': self.pwd}))
 			print (r.status_code)
 			if r.status_code == 200:
-				print("Woohoo")
 				self.frame.destroy()
 				self.root.userid = self.user_id
 				self.root.load_home_page()
